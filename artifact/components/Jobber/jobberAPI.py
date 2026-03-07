@@ -6,7 +6,7 @@ import httpx
 
 JOBBER_GRAPHQL_URL = "https://api.getjobber.com/api/graphql"
 JOBBER_TOKEN_URL = "https://api.getjobber.com/api/oauth/token"
-
+JOBBER_VERSION  = "2023-11-15"
 
 class JobberAPI(Component):
     display_name = "Jobber API"
@@ -53,6 +53,7 @@ class JobberAPI(Component):
         return {
             "Authorization": f"Bearer {token}",
             "Content-Type": "application/json",
+            "X-JOBBER-GRAPHQL-VERSION": JOBBER_VERSION,
         }
 
     def _refresh_access_token(self, client: httpx.Client) -> str:
