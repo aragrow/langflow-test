@@ -7,7 +7,11 @@ import re
 
 class RegexRouter(Component):
     display_name = "Regex Router"
-    description = "Evaluates text against a pattern using equals, contains, or regex matching. Returns match result."
+    description = (
+        "Routes messages based on pattern matching. "
+        "Use Match/No Match outputs for conditional flow branching, "
+        "or the Result output for string-based evaluation."
+    )
     icon = "regex"
     name = "RegexRouter"
 
@@ -16,7 +20,6 @@ class RegexRouter(Component):
             name="text",
             display_name="Text",
             info="Text to evaluate",
-            tool_mode=True,
         ),
         DropdownInput(
             name="operator",
@@ -32,22 +35,37 @@ class RegexRouter(Component):
     ]
 
     outputs = [
+        Output(display_name="Match", name="true_response", method="build_true_response"),
+        Output(display_name="No Match", name="false_response", method="build_false_response"),
         Output(display_name="Result", name="output", method="build_output"),
         Output(display_name="Toolset", name="component_as_tool", method="to_toolkit", types=["Tool"]),
     ]
 
-    def build_output(self) -> Message:
+    def _evaluate(self) -> bool:
         text = self.text
         pattern = self.pattern
-
         if self.operator == "equals":
-            matched = text == pattern
+            return text == pattern
         elif self.operator == "contains":
-            matched = pattern in text
+            return pattern in text
         else:
-            matched = re.search(pattern, text) is not None
+            return re.search(pattern, text) is not None
 
-        result = "true" if matched else "false"
+    def build_true_response(self) -> Message:
+        """Fires only when the pattern matches. Use this output to continue the flow on success."""
+        if not self._evaluate():
+            self.stop("true_response")
+        return Message(text=self.text, sender="User", sender_name="User")
+
+    def build_false_response(self) -> Message:
+        """Fires only when the pattern does NOT match. Use this output to handle failure cases."""
+        if self._evaluate():
+            self.stop("false_response")
+        return Message(text=self.text, sender="User", sender_name="User")
+
+    def build_output(self) -> Message:
+        """Returns 'true' or 'false' as text. Legacy single-output mode."""
+        result = "true" if self._evaluate() else "false"
         message = Message(text=result)
         self.status = message
         return message
