@@ -41,6 +41,9 @@ export LANGFLOW_COMPONENTS_PATH="/Users/david/Documents/python/virtual/langflow-
 export LANGFLOW_SKIP_AUTH_AUTO_LOGIN=true  # deprecated in v2.0 but required in v1.5
 export GRPC_DNS_RESOLVER=native
 export DO_NOT_TRACK=true
+export LANGFLOW_LOG_FILE="/Users/david/Library/Caches/langflow/langflow.log"
+export LANGFLOW_LOG_LEVEL="ERROR"
+
 
 LF_VERSION=$(langflow --version 2>/dev/null | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -1)
 LF_PORT=7860
