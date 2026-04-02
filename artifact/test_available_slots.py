@@ -8,9 +8,9 @@ import httpx
 from datetime import datetime, timezone, timedelta
 
 # ── Config (matches Langflow global variables) ──────────────────────────
-API_KEY = "pit-ff639a42-f75f-4056-8806-4eb82e609aa2"
-LOCATION_ID = "6PSiia8Q984m32jw8wJE"
-CALENDAR_ID = "ax0wqrItV0HadykGApYE"
+API_KEY = "pit-xxxxxxx"
+LOCATION_ID = "xxxxx"
+CALENDAR_ID = "xxx"
 TIMEZONE = "America/New_York"
 CONTACT_IDENTIFIER = "davidarago99@gmail.com"
 
