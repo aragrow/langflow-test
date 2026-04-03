@@ -1,3 +1,26 @@
+"""
+GHL Calendar Lookup
+Retrieves upcoming appointments for a GoHighLevel contact by their contact ID.
+Returns appointment details including title, date/time, status, and calendar name.
+
+Note: This is an older component that takes a raw contact ID. For most use cases,
+prefer GHL Get Appointments which accepts email/phone and handles contact lookup.
+
+GHL API:
+- GET /contacts/{contactId}/appointments — fetches appointments for a contact
+- GET /calendars/ — fetches calendar names for display
+
+Inputs (configured in Langflow):
+- contact_id   : The GHL contact ID (tool_mode)
+- api_key      : GHL Private Integration Token (secret)
+- location_id  : GHL Location (Sub-Account) ID
+- max_results  : Maximum appointments to return (default 5)
+
+Outputs:
+- output            : Message with formatted upcoming appointments
+- component_as_tool : Exposes this component as a tool for agents
+"""
+
 from lfx.custom.custom_component.component import Component
 from lfx.io import IntInput, MessageTextInput, Output, SecretStrInput, StrInput
 from lfx.schema.message import Message
@@ -57,6 +80,7 @@ class GoHighLevelCalendarLookup(Component):
         }
 
     def _get_appointments(self, client: httpx.Client) -> list:
+        """Fetch all appointments for the contact via GET /contacts/{id}/appointments."""
         response = client.get(
             f"{GHL_API_BASE}/contacts/{self.contact_id}/appointments",
             headers=self._headers(),
@@ -77,6 +101,7 @@ class GoHighLevelCalendarLookup(Component):
         return {c["id"]: c.get("name", "Unknown Calendar") for c in data.get("calendars", [])}
 
     def _format_appointment(self, appt: dict, calendar_name: str) -> str:
+        """Format a single appointment as a human-readable line."""
         start = appt.get("startTime", "")
         end = appt.get("endTime", "")
         try:
@@ -92,6 +117,14 @@ class GoHighLevelCalendarLookup(Component):
         )
 
     def build_output(self) -> Message:
+        """Fetch and return upcoming appointments for the contact.
+
+        Flow:
+        1. Fetch all appointments for the contact ID.
+        2. Fetch calendar names for display.
+        3. Filter to upcoming only, sort by start time, limit to max_results.
+        4. Format and return as a message.
+        """
         with httpx.Client(timeout=10.0) as client:
             appointments = self._get_appointments(client)
             calendar_map = self._get_calendars(client)

@@ -207,3 +207,4 @@ marimo/_lsp/
 __marimo__/
 .tokens.json
 .key
+test*.py

@@ -1,3 +1,26 @@
+"""
+GHL Contact Lookup
+Searches GoHighLevel contacts by email or phone number and returns
+the contact's classification custom field value (vendor, client, or prospect).
+
+Used by the Orchestrator to determine how to route the caller.
+
+GHL API:
+- POST /contacts/search — finds the contact by email or phone
+- Reads the classification from a configurable custom field ID
+
+Inputs (configured in Langflow):
+- search_value   : The email or phone to search for (tool_mode)
+- search_type    : "email" or "phone" (dropdown)
+- api_key        : GHL Private Integration Token (secret)
+- location_id    : GHL Location (Sub-Account) ID
+- classification_field_id : The custom field ID holding the classification
+
+Outputs:
+- output            : Message with contact name + classification
+- component_as_tool : Exposes this component as a tool for agents
+"""
+
 from lfx.custom.custom_component.component import Component
 from lfx.io import DropdownInput, MessageTextInput, Output, SecretStrInput, StrInput
 from lfx.schema.message import Message
@@ -101,6 +124,13 @@ class GoHighLevelContactLookup(Component):
         return "unknown"
 
     def build_output(self) -> Message:
+        """Look up a contact and return their classification.
+
+        Flow:
+        1. Search for the contact by email or phone via POST /contacts/search.
+        2. Extract the classification value from the configured custom field.
+        3. Return a message with the contact name, ID, and classification.
+        """
         with httpx.Client(timeout=10.0) as client:
             contact = self._search_contact(client)
 

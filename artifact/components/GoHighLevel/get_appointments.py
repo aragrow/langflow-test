@@ -1,30 +1,31 @@
 """
-GHL Book Appointment
-Books a confirmed appointment in GoHighLevel after the user selects a slot.
+GHL Get Appointments
+Retrieves upcoming booked appointments for a contact from GoHighLevel.
+Uses the calendar events endpoint filtered by contactId.
+
+Filters out cancelled appointments and returns only active ones
+(status: confirmed, new, or showed) sorted by start time.
 
 GHL API:
 - POST /contacts/search                  — finds the contact by email or phone
-- POST /calendars/events/appointments    — creates the appointment
+- GET  /calendars/events/appointments    — fetches events filtered by contactId,
+      calendarId, and date range (next 90 days)
 
 Timezone Handling:
-- The selected_slot ISO string is sent to GHL as-is (should be in the org
-  timezone, as returned by GHL Available Slots).
-- The "user_timezone" input is only used to format the confirmation message
-  displayed to the user. Falls back to org_timezone if empty.
+- timezone      : Organization timezone for GHL API calls
+- user_timezone : User's timezone for displaying appointment times.
+                  Falls back to org timezone if empty.
 
 Inputs (configured in Langflow):
-- contact_identifier   : Email or phone to identify the contact (tool_mode)
-- selected_slot        : ISO 8601 slot time from Available Slots (tool_mode)
-- service_name         : Appointment title / service name (tool_mode)
-- api_key              : GHL Private Integration Token (secret)
-- location_id          : GHL Location (Sub-Account) ID
-- calendar_id          : GHL Calendar ID to book on
-- slot_duration_minutes: Duration in minutes (default 30)
-- org_timezone         : Organization timezone for GHL storage
-- user_timezone        : User's timezone for display (tool_mode, optional)
+- contact_identifier : Email or phone to identify the contact (tool_mode)
+- api_key            : GHL Private Integration Token (secret)
+- location_id        : GHL Location (Sub-Account) ID
+- calendar_id        : GHL Calendar ID to query
+- timezone           : Organization timezone (e.g. America/Chicago)
+- user_timezone      : User's timezone for display (tool_mode, optional)
 
 Outputs:
-- output            : Message with booking confirmation details
+- output            : Message listing upcoming appointments with details
 - component_as_tool : Exposes this component as a tool for agents
 """
 
@@ -33,7 +34,7 @@ from lfx.io import MessageTextInput, Output, SecretStrInput, StrInput
 from lfx.schema.message import Message
 
 import httpx
-from datetime import datetime, timedelta
+from datetime import datetime, timezone, timedelta
 from zoneinfo import ZoneInfo
 
 
@@ -41,32 +42,20 @@ GHL_BASE = "https://services.leadconnectorhq.com"
 GHL_VERSION = "2021-07-28"
 
 
-class GoHighLevelBookAppointment(Component):
-    display_name = "GHL Book Appointment"
+class GoHighLevelGetAppointments(Component):
+    display_name = "GHL Get Appointments"
     description = (
-        "Books a confirmed appointment in GoHighLevel. "
-        "Pass the contact's email or phone, the selected slot time, and the service name."
+        "Retrieves upcoming booked appointments for a contact from GoHighLevel. "
+        "Pass the contact's email or phone to look up their scheduled events."
     )
     icon = "calendar"
-    name = "GoHighLevelBookAppointment"
+    name = "GoHighLevelGetAppointments"
 
     inputs = [
         MessageTextInput(
             name="contact_identifier",
             display_name="Phone or Email",
             info="The contact's phone number or email address",
-            tool_mode=True,
-        ),
-        MessageTextInput(
-            name="selected_slot",
-            display_name="Selected Slot",
-            info="The selected slot in ISO format, e.g. 2026-04-03T10:00:00-04:00",
-            tool_mode=True,
-        ),
-        MessageTextInput(
-            name="service_name",
-            display_name="Service Name",
-            info="The service or appointment title, e.g. WordPress Optimization",
             tool_mode=True,
         ),
         SecretStrInput(
@@ -82,18 +71,12 @@ class GoHighLevelBookAppointment(Component):
         StrInput(
             name="calendar_id",
             display_name="Calendar ID",
-            info="GoHighLevel Calendar ID to book on",
+            info="GoHighLevel Calendar ID to query appointments from",
         ),
         StrInput(
-            name="slot_duration_minutes",
-            display_name="Slot Duration (minutes)",
-            info="Duration of the appointment in minutes",
-            value="30",
-        ),
-        StrInput(
-            name="org_timezone",
+            name="timezone",
             display_name="Organization Timezone",
-            info="Organization timezone for GHL storage (e.g. America/Chicago)",
+            info="Organization timezone for GHL API calls (e.g. America/Chicago)",
             value="America/Chicago",
         ),
         MessageTextInput(
@@ -105,7 +88,7 @@ class GoHighLevelBookAppointment(Component):
     ]
 
     outputs = [
-        Output(display_name="Booking Result", name="output", method="book_appointment"),
+        Output(display_name="Appointments", name="output", method="get_appointments"),
         Output(display_name="Toolset", name="component_as_tool", method="to_toolkit", types=["Tool"]),
     ]
 
@@ -147,51 +130,28 @@ class GoHighLevelBookAppointment(Component):
         return contacts[0] if contacts else None
 
     def _format_time_for_user(self, iso_str: str) -> str:
-        """Convert ISO time to human-readable format in the user's timezone."""
+        """Convert ISO datetime to human-readable format in the user's timezone."""
         try:
             dt = datetime.fromisoformat(iso_str.replace("Z", "+00:00"))
-            user_tz_name = (self.user_timezone or "").strip() or self.org_timezone or "UTC"
+            user_tz_name = (self.user_timezone or "").strip() or self.timezone or "UTC"
             dt_user = dt.astimezone(ZoneInfo(user_tz_name))
             return dt_user.strftime("%I:%M %p on %A, %B %d, %Y")
         except (ValueError, AttributeError, KeyError):
             return iso_str
 
-    def book_appointment(self) -> Message:
-        """Book an appointment in GHL for the identified contact.
+    def get_appointments(self) -> Message:
+        """Retrieve and display upcoming appointments for a contact.
 
         Flow:
-        1. Validate required inputs (identifier, slot, service).
-        2. Parse the selected slot ISO string and compute end time.
-        3. Look up the contact by email/phone.
-        4. POST the appointment to GHL with status "confirmed".
-        5. Return a confirmation message with time displayed in user's timezone.
+        1. Look up the contact by email/phone.
+        2. Query GHL for appointments in the next 90 days filtered by
+           contactId, calendarId, and locationId.
+        3. Filter to active statuses (confirmed, new, showed).
+        4. Sort by start time and format in the user's timezone.
         """
         identifier = (self.contact_identifier or "").strip()
-        slot = (self.selected_slot or "").strip()
-        service = (self.service_name or "").strip()
-
         if not identifier:
             return self._msg("Error: A phone number or email address is required.")
-        if not slot:
-            return self._msg("Error: No slot was selected. Please choose a time slot first.")
-        if not service:
-            return self._msg("Error: A service name is required.")
-
-        try:
-            duration = int(self.slot_duration_minutes or "30")
-        except ValueError:
-            duration = 30
-
-        try:
-            start_dt = datetime.fromisoformat(slot.replace("Z", "+00:00"))
-            end_dt = start_dt + timedelta(minutes=duration)
-            start_iso = start_dt.isoformat()
-            end_iso = end_dt.isoformat()
-        except (ValueError, AttributeError):
-            return self._msg(
-                f"Error: Could not parse the selected slot time '{slot}'. "
-                "Expected ISO format like 2026-04-03T10:00:00-04:00."
-            )
 
         try:
             with httpx.Client(timeout=15.0) as client:
@@ -208,23 +168,25 @@ class GoHighLevelBookAppointment(Component):
                 last = contact.get("lastName", "")
                 contact_name = f"{first} {last}".strip() or identifier
 
-                appointment_body = {
-                    "calendarId": self.calendar_id,
+                # Query upcoming appointments for this contact
+                now = datetime.now(timezone.utc)
+                end_date = now + timedelta(days=90)
+
+                params = {
                     "locationId": self.location_id,
+                    "calendarId": self.calendar_id,
                     "contactId": contact_id,
-                    "startTime": start_iso,
-                    "endTime": end_iso,
-                    "title": service,
-                    "appointmentStatus": "confirmed",
+                    "startTime": now.strftime("%Y-%m-%dT%H:%M:%S+00:00"),
+                    "endTime": end_date.strftime("%Y-%m-%dT%H:%M:%S+00:00"),
                 }
 
-                resp = client.post(
+                resp = client.get(
                     f"{GHL_BASE}/calendars/events/appointments",
                     headers=self._headers(),
-                    json=appointment_body,
+                    params=params,
                 )
                 resp.raise_for_status()
-                result = resp.json()
+                data = resp.json()
 
         except httpx.HTTPStatusError as exc:
             return self._msg(
@@ -233,15 +195,41 @@ class GoHighLevelBookAppointment(Component):
         except httpx.TimeoutException:
             return self._msg("GHL API request timed out. Please try again.")
 
-        appointment_id = result.get("id", "unknown")
-        time_display = self._format_time_for_user(start_iso)
+        events = data.get("events", [])
 
+        # Filter to only confirmed/showed statuses (exclude cancelled)
+        active_events = [
+            e for e in events
+            if e.get("appointmentStatus", "").lower() in ("confirmed", "new", "showed")
+        ]
+
+        if not active_events:
+            return self._msg(
+                f"No upcoming appointments found for {contact_name}. "
+                "Would you like to schedule a new one?"
+            )
+
+        # Sort by start time
+        active_events.sort(key=lambda e: e.get("startTime", ""))
+
+        lines = []
+        for i, event in enumerate(active_events, 1):
+            title = event.get("title", "Appointment")
+            start = self._format_time_for_user(event.get("startTime", ""))
+            status = event.get("appointmentStatus", "unknown")
+            event_id = event.get("id", "unknown")
+            lines.append(
+                f"  {i}. {title}\n"
+                f"     Time: {start}\n"
+                f"     Status: {status}\n"
+                f"     ID: {event_id}"
+            )
+
+        appointments_text = "\n".join(lines)
         return self._msg(
-            f"Appointment booked successfully for {contact_name}!\n"
-            f"  Service: {service}\n"
-            f"  Time: {time_display}\n"
-            f"  Confirmation ID: {appointment_id}\n"
-            "You will receive a confirmation shortly."
+            f"Upcoming appointments for {contact_name}:\n\n"
+            f"{appointments_text}\n\n"
+            "How can I help with these?"
         )
 
     def _msg(self, text: str) -> Message:

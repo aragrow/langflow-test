@@ -7,6 +7,28 @@ Key differences from V1:
 - locationId is NEVER sent as a query param to free-slots (causes 422)
 - Walks forward up to 14 business days instead of checking only the next day
 - Better error handling with descriptive messages returned to the agent
+
+GHL API:
+- POST /contacts/search       — finds the contact by email or phone
+- GET  /calendars/{id}/free-slots — fetches open slots for a given day
+
+Timezone Handling:
+- The "timezone" input (org timezone) is sent to the GHL API so slots
+  are returned relative to the organization's local time.
+- The "user_timezone" input (tool_mode) is used to convert slot times
+  for display to the user. If empty, falls back to the org timezone.
+
+Inputs (configured in Langflow):
+- contact_identifier : Email or phone to identify the contact (tool_mode)
+- api_key            : GHL Private Integration Token (secret)
+- location_id        : GHL Location (Sub-Account) ID
+- calendar_id        : GHL Calendar ID to check for slots
+- timezone           : Organization timezone for GHL API (e.g. America/Chicago)
+- user_timezone      : User's timezone for display (tool_mode, optional)
+
+Outputs:
+- output            : Message listing the next available time slots
+- component_as_tool : Exposes this component as a tool for agents
 """
 
 from lfx.custom.custom_component.component import Component
@@ -15,6 +37,7 @@ from lfx.schema.message import Message
 
 import httpx
 from datetime import datetime, timezone, timedelta
+from zoneinfo import ZoneInfo
 
 
 GHL_BASE = "https://services.leadconnectorhq.com"
@@ -55,9 +78,15 @@ class GoHighLevelAvailableSlots(Component):
         ),
         StrInput(
             name="timezone",
-            display_name="Timezone",
-            info="Timezone for slot display (e.g. America/New_York)",
+            display_name="Organization Timezone",
+            info="Organization timezone used for GHL API calls and storage (e.g. America/Chicago)",
             value="America/Chicago",
+        ),
+        MessageTextInput(
+            name="user_timezone",
+            display_name="User Timezone",
+            info="The user's timezone for display (e.g. America/New_York). If empty, defaults to the organization timezone.",
+            tool_mode=True,
         ),
     ]
 
@@ -156,24 +185,34 @@ class GoHighLevelAvailableSlots(Component):
             nxt += timedelta(days=1)
         return nxt.replace(hour=0, minute=0, second=0, microsecond=0)
 
-    @staticmethod
-    def _format_time(slot_iso: str) -> str:
-        """Convert '2026-04-03T10:00:00-04:00' → '10:00 AM'."""
+    def _format_time_for_user(self, slot_iso: str) -> str:
+        """Convert ISO time to human-readable format in the user's timezone."""
         try:
             dt = datetime.fromisoformat(slot_iso.replace("Z", "+00:00"))
-            return dt.strftime("%I:%M %p")
-        except (ValueError, AttributeError):
+            user_tz_name = (self.user_timezone or "").strip() or self.timezone or "UTC"
+            user_tz = ZoneInfo(user_tz_name)
+            dt_user = dt.astimezone(user_tz)
+            return dt_user.strftime("%I:%M %p")
+        except (ValueError, AttributeError, KeyError):
             return slot_iso
 
     # ── Main output ─────────────────────────────────────────────────
 
     def get_available_slots(self) -> Message:
+        """Find and return the next available appointment slots.
+
+        Flow:
+        1. Look up the contact by email/phone.
+        2. Starting from the next business day, walk forward up to 14
+           business days calling the GHL free-slots endpoint each day.
+        3. Return the first 2 available slots, formatted in the user's timezone.
+        """
         identifier = (self.contact_identifier or "").strip()
         if not identifier:
             return self._msg("Error: A phone number or email address is required.")
 
         start_date = self._next_business_day()
-        tz_label = self.timezone or "UTC"
+        user_tz_label = (self.user_timezone or "").strip() or self.timezone or "UTC"
 
         try:
             with httpx.Client(timeout=15.0) as client:
@@ -203,7 +242,7 @@ class GoHighLevelAvailableSlots(Component):
 
         top_two = slots[:2]
         slot_lines = "\n".join(
-            f"  {i + 1}. {self._format_time(s)} ({tz_label})"
+            f"  {i + 1}. {self._format_time_for_user(s)} ({user_tz_label})"
             for i, s in enumerate(top_two)
         )
         return self._msg(
