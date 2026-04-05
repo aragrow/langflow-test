@@ -1,23 +1,21 @@
 """
 GHL Contact Lookup
 Searches GoHighLevel contacts by email or phone number and returns
-the contact's classification custom field value (vendor, client, or prospect).
-
-Used by the Orchestrator to determine how to route the caller.
+the contact's name, id, and classification (vendor/client/prospect)
+for downstream routing.
 
 GHL API:
 - POST /contacts/search — finds the contact by email or phone
-- Reads the classification from a configurable custom field ID
+- Reads the classification from a hard-coded custom field ID
 
 Inputs (configured in Langflow):
-- search_value   : The email or phone to search for (tool_mode)
-- search_type    : "email" or "phone" (dropdown)
-- api_key        : GHL Private Integration Token (secret)
-- location_id    : GHL Location (Sub-Account) ID
-- classification_field_id : The custom field ID holding the classification
+- search_value : The email or phone to search for (tool_mode)
+- search_type  : "email" or "phone" (dropdown)
+- api_key      : GHL Private Integration Token (secret)
+- location_id  : GHL Location (Sub-Account) ID
 
 Outputs:
-- output            : Message with contact name + classification
+- output            : Message with contact name, id, and classification
 - component_as_tool : Exposes this component as a tool for agents
 """
 
@@ -28,8 +26,13 @@ from lfx.schema.message import Message
 import httpx
 
 
-GHL_API_BASE = "https://services.leadconnectorhq.com"
-GHL_API_VERSION = "2021-07-28"
+GHL_BASE = "https://services.leadconnectorhq.com"
+GHL_VERSION = "2021-07-28"
+
+# Custom field ID in GHL that stores the contact classification
+# (vendor / client / prospect). Update this if the field is recreated in GHL.
+# Find it under Settings > Custom Fields in GHL.
+CLASSIFICATION_FIELD_ID = ""  # TODO: set to your GHL custom field id
 
 
 class GoHighLevelContactLookup(Component):
@@ -65,28 +68,24 @@ class GoHighLevelContactLookup(Component):
             display_name="Location ID",
             info="Your GoHighLevel Location (Sub-Account) ID",
         ),
-        StrInput(
-            name="classification_field_id",
-            display_name="Classification Field ID",
-            info="The custom field ID in GHL that holds the classification (vendor/client/prospect). "
-                 "Find it under Settings > Custom Fields in GHL.",
-        ),
     ]
 
     outputs = [
-        Output(display_name="Classification", name="output", method="build_output"),
+        Output(display_name="Classification", name="output", method="lookup_contact"),
         Output(display_name="Toolset", name="component_as_tool", method="to_toolkit", types=["Tool"]),
     ]
 
-    def _build_headers(self) -> dict:
+    # ── API helpers ─────────────────────────────────────────────────
+
+    def _headers(self) -> dict:
         return {
             "Authorization": f"Bearer {self.api_key}",
             "Content-Type": "application/json",
-            "Version": GHL_API_VERSION,
+            "Version": GHL_VERSION,
         }
 
     def _search_contact(self, client: httpx.Client) -> dict | None:
-        """Search for a contact using POST /contacts/search with advanced filters."""
+        """Search GHL contacts by email or phone. Returns first match or None."""
         body = {
             "locationId": self.location_id,
             "pageLimit": 1,
@@ -103,27 +102,28 @@ class GoHighLevelContactLookup(Component):
                 }
             ],
         }
-
-        response = client.post(
-            f"{GHL_API_BASE}/contacts/search",
-            headers=self._build_headers(),
+        resp = client.post(
+            f"{GHL_BASE}/contacts/search",
+            headers=self._headers(),
             json=body,
         )
-        response.raise_for_status()
-        data = response.json()
-        contacts = data.get("contacts", [])
+        resp.raise_for_status()
+        contacts = resp.json().get("contacts", [])
         return contacts[0] if contacts else None
 
     def _get_classification(self, contact: dict) -> str:
         """Extract the classification value from customFields using the field ID."""
-        custom_fields = contact.get("customFields", [])
-        for field in custom_fields:
-            if field.get("id") == self.classification_field_id:
+        if not CLASSIFICATION_FIELD_ID:
+            return "unknown"
+        for field in contact.get("customFields", []):
+            if field.get("id") == CLASSIFICATION_FIELD_ID:
                 value = field.get("value", "")
                 return value.strip().lower() if value else "unknown"
         return "unknown"
 
-    def build_output(self) -> Message:
+    # ── Main output ─────────────────────────────────────────────────
+
+    def lookup_contact(self) -> Message:
         """Look up a contact and return their classification.
 
         Flow:
@@ -131,22 +131,36 @@ class GoHighLevelContactLookup(Component):
         2. Extract the classification value from the configured custom field.
         3. Return a message with the contact name, ID, and classification.
         """
-        with httpx.Client(timeout=10.0) as client:
-            contact = self._search_contact(client)
+        identifier = (self.search_value or "").strip()
+        if not identifier:
+            return self._msg("Error: An email address or phone number is required.")
+
+        try:
+            with httpx.Client(timeout=10.0) as client:
+                contact = self._search_contact(client)
+        except httpx.HTTPStatusError as exc:
+            return self._msg(
+                f"GHL API error: {exc.response.status_code} — {exc.response.text[:200]}"
+            )
+        except httpx.TimeoutException:
+            return self._msg("GHL API request timed out. Please try again.")
 
         if not contact:
-            text = f"No contact found in GoHighLevel for {self.search_type}: {self.search_value}"
-            message = Message(text=text)
-            self.status = message
-            return message
+            return self._msg(
+                f"No contact found in GoHighLevel for {self.search_type}: {identifier}"
+            )
 
         classification = self._get_classification(contact)
-        contact_name = f"{contact.get('firstName', '')} {contact.get('lastName', '')}".strip()
+        first = contact.get("firstName", "")
+        last = contact.get("lastName", "")
+        contact_name = f"{first} {last}".strip() or identifier
 
-        text = (
+        return self._msg(
             f"Contact found: {contact_name} (ID: {contact.get('id')}). "
             f"Classification: {classification}"
         )
+
+    def _msg(self, text: str) -> Message:
         message = Message(text=text)
         self.status = message
         return message
