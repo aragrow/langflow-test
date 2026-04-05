@@ -34,7 +34,7 @@ from lfx.io import MessageTextInput, Output, SecretStrInput, StrInput
 from lfx.schema.message import Message
 
 import httpx
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 
 
@@ -168,22 +168,13 @@ class GoHighLevelGetAppointments(Component):
                 last = contact.get("lastName", "")
                 contact_name = f"{first} {last}".strip() or identifier
 
-                # Query upcoming appointments for this contact
-                now = datetime.now(timezone.utc)
-                end_date = now + timedelta(days=90)
-
-                params = {
-                    "locationId": self.location_id,
-                    "calendarId": self.calendar_id,
-                    "contactId": contact_id,
-                    "startTime": now.strftime("%Y-%m-%dT%H:%M:%S+00:00"),
-                    "endTime": end_date.strftime("%Y-%m-%dT%H:%M:%S+00:00"),
-                }
-
+                # Fetch appointments for this contact. GHL's
+                # /contacts/{id}/appointments endpoint returns every
+                # appointment linked to the contact with no query params
+                # required — we filter by calendar/date client-side.
                 resp = client.get(
-                    f"{GHL_BASE}/calendars/events/appointments",
+                    f"{GHL_BASE}/contacts/{contact_id}/appointments",
                     headers=self._headers(),
-                    params=params,
                 )
                 resp.raise_for_status()
                 data = resp.json()
@@ -197,15 +188,43 @@ class GoHighLevelGetAppointments(Component):
 
         events = data.get("events", [])
 
-        # Filter to only confirmed/showed statuses (exclude cancelled)
+        # The contact appointments endpoint returns every event for the
+        # contact across all calendars, past and future. Filter down to:
+        # - matching the configured calendar (if any)
+        # - active statuses (confirmed / new / showed — exclude cancelled)
+        # - upcoming only (startTime in the future)
+        now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+
+        # Treat obvious placeholder values (anything with a space or too
+        # long/short to be a real GHL id) as "no calendar filter".
+        cal_filter = (self.calendar_id or "").strip()
+        if " " in cal_filter or not (15 <= len(cal_filter) <= 30):
+            cal_filter = ""
+
         active_events = [
             e for e in events
             if e.get("appointmentStatus", "").lower() in ("confirmed", "new", "showed")
+            and (not cal_filter or e.get("calendarId") == cal_filter)
+            and (e.get("startTime", "") >= now_iso)
         ]
 
         if not active_events:
+            # Build a diagnostic so we know why the filter rejected things.
+            total = len(events)
+            by_status: dict[str, int] = {}
+            calendars_seen: set[str] = set()
+            for e in events:
+                s = (e.get("appointmentStatus") or "").lower() or "(none)"
+                by_status[s] = by_status.get(s, 0) + 1
+                c = e.get("calendarId") or ""
+                if c:
+                    calendars_seen.add(c)
             return self._msg(
-                f"No upcoming appointments found for {contact_name}. "
+                f"No upcoming appointments found for {contact_name} "
+                f"(raw events: {total}, statuses: {by_status}, "
+                f"calendars seen: {sorted(calendars_seen)}, "
+                f"calendar_filter: {cal_filter or '(disabled)'!r}, "
+                f"now: {now_iso}). "
                 "Would you like to schedule a new one?"
             )
 
