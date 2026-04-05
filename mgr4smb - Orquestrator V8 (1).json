@@ -7,7 +7,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "Google Generative AI Embeddings",
-            "id": "Google Generative AI Embeddings-BissY",
+            "id": "Google Generative AI Embeddings-WjCvI",
             "name": "embeddings",
             "output_types": [
               "Embeddings"
@@ -15,19 +15,19 @@
           },
           "targetHandle": {
             "fieldName": "embedding",
-            "id": "MongoDBAtlasVector-tGzKg",
+            "id": "MongoDBAtlasVector-RH55o",
             "inputTypes": [
               "Embeddings"
             ],
             "type": "other"
           }
         },
-        "id": "reactflow__edge-Google Generative AI Embeddings-BissY{\u0153dataType\u0153:\u0153Google Generative AI Embeddings\u0153,\u0153id\u0153:\u0153Google Generative AI Embeddings-BissY\u0153,\u0153name\u0153:\u0153embeddings\u0153,\u0153output_types\u0153:[\u0153Embeddings\u0153]}-MongoDBAtlasVector-tGzKg{\u0153fieldName\u0153:\u0153embedding\u0153,\u0153id\u0153:\u0153MongoDBAtlasVector-tGzKg\u0153,\u0153inputTypes\u0153:[\u0153Embeddings\u0153],\u0153type\u0153:\u0153other\u0153}",
+        "id": "reactflow__edge-Google Generative AI Embeddings-WjCvI{\u0153dataType\u0153:\u0153Google Generative AI Embeddings\u0153,\u0153id\u0153:\u0153Google Generative AI Embeddings-WjCvI\u0153,\u0153name\u0153:\u0153embeddings\u0153,\u0153output_types\u0153:[\u0153Embeddings\u0153]}-MongoDBAtlasVector-RH55o{\u0153fieldName\u0153:\u0153embedding\u0153,\u0153id\u0153:\u0153MongoDBAtlasVector-RH55o\u0153,\u0153inputTypes\u0153:[\u0153Embeddings\u0153],\u0153type\u0153:\u0153other\u0153}",
         "selected": false,
-        "source": "Google Generative AI Embeddings-BissY",
-        "sourceHandle": "{\u0153dataType\u0153:\u0153Google Generative AI Embeddings\u0153,\u0153id\u0153:\u0153Google Generative AI Embeddings-BissY\u0153,\u0153name\u0153:\u0153embeddings\u0153,\u0153output_types\u0153:[\u0153Embeddings\u0153]}",
-        "target": "MongoDBAtlasVector-tGzKg",
-        "targetHandle": "{\u0153fieldName\u0153:\u0153embedding\u0153,\u0153id\u0153:\u0153MongoDBAtlasVector-tGzKg\u0153,\u0153inputTypes\u0153:[\u0153Embeddings\u0153],\u0153type\u0153:\u0153other\u0153}"
+        "source": "Google Generative AI Embeddings-WjCvI",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153Google Generative AI Embeddings\u0153,\u0153id\u0153:\u0153Google Generative AI Embeddings-WjCvI\u0153,\u0153name\u0153:\u0153embeddings\u0153,\u0153output_types\u0153:[\u0153Embeddings\u0153]}",
+        "target": "MongoDBAtlasVector-RH55o",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153embedding\u0153,\u0153id\u0153:\u0153MongoDBAtlasVector-RH55o\u0153,\u0153inputTypes\u0153:[\u0153Embeddings\u0153],\u0153type\u0153:\u0153other\u0153}"
       },
       {
         "animated": false,
@@ -35,7 +35,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "Prompt Template",
-            "id": "Prompt Template-FG3Op",
+            "id": "Prompt Template-BD9ud",
             "name": "prompt",
             "output_types": [
               "Message"
@@ -43,19 +43,19 @@
           },
           "targetHandle": {
             "fieldName": "system_prompt",
-            "id": "Agent-nPCiL",
+            "id": "Agent-BEjE7",
             "inputTypes": [
               "Message"
             ],
             "type": "str"
           }
         },
-        "id": "reactflow__edge-Prompt Template-FG3Op{\u0153dataType\u0153:\u0153Prompt Template\u0153,\u0153id\u0153:\u0153Prompt Template-FG3Op\u0153,\u0153name\u0153:\u0153prompt\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}-Agent-nPCiL{\u0153fieldName\u0153:\u0153system_prompt\u0153,\u0153id\u0153:\u0153Agent-nPCiL\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}",
+        "id": "reactflow__edge-Prompt Template-BD9ud{\u0153dataType\u0153:\u0153Prompt Template\u0153,\u0153id\u0153:\u0153Prompt Template-BD9ud\u0153,\u0153name\u0153:\u0153prompt\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}-Agent-BEjE7{\u0153fieldName\u0153:\u0153system_prompt\u0153,\u0153id\u0153:\u0153Agent-BEjE7\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}",
         "selected": false,
-        "source": "Prompt Template-FG3Op",
-        "sourceHandle": "{\u0153dataType\u0153:\u0153Prompt Template\u0153,\u0153id\u0153:\u0153Prompt Template-FG3Op\u0153,\u0153name\u0153:\u0153prompt\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}",
-        "target": "Agent-nPCiL",
-        "targetHandle": "{\u0153fieldName\u0153:\u0153system_prompt\u0153,\u0153id\u0153:\u0153Agent-nPCiL\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}"
+        "source": "Prompt Template-BD9ud",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153Prompt Template\u0153,\u0153id\u0153:\u0153Prompt Template-BD9ud\u0153,\u0153name\u0153:\u0153prompt\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}",
+        "target": "Agent-BEjE7",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153system_prompt\u0153,\u0153id\u0153:\u0153Agent-BEjE7\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}"
       },
       {
         "animated": false,
@@ -63,7 +63,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "Prompt Template",
-            "id": "Prompt Template-a0WGu",
+            "id": "Prompt Template-6nFyZ",
             "name": "prompt",
             "output_types": [
               "Message"
@@ -71,19 +71,19 @@
           },
           "targetHandle": {
             "fieldName": "system_prompt",
-            "id": "Agent-ioZUZ",
+            "id": "Agent-MO9lm",
             "inputTypes": [
               "Message"
             ],
             "type": "str"
           }
         },
-        "id": "reactflow__edge-Prompt Template-a0WGu{\u0153dataType\u0153:\u0153Prompt Template\u0153,\u0153id\u0153:\u0153Prompt Template-a0WGu\u0153,\u0153name\u0153:\u0153prompt\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}-Agent-ioZUZ{\u0153fieldName\u0153:\u0153system_prompt\u0153,\u0153id\u0153:\u0153Agent-ioZUZ\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}",
+        "id": "reactflow__edge-Prompt Template-6nFyZ{\u0153dataType\u0153:\u0153Prompt Template\u0153,\u0153id\u0153:\u0153Prompt Template-6nFyZ\u0153,\u0153name\u0153:\u0153prompt\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}-Agent-MO9lm{\u0153fieldName\u0153:\u0153system_prompt\u0153,\u0153id\u0153:\u0153Agent-MO9lm\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}",
         "selected": false,
-        "source": "Prompt Template-a0WGu",
-        "sourceHandle": "{\u0153dataType\u0153:\u0153Prompt Template\u0153,\u0153id\u0153:\u0153Prompt Template-a0WGu\u0153,\u0153name\u0153:\u0153prompt\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}",
-        "target": "Agent-ioZUZ",
-        "targetHandle": "{\u0153fieldName\u0153:\u0153system_prompt\u0153,\u0153id\u0153:\u0153Agent-ioZUZ\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}"
+        "source": "Prompt Template-6nFyZ",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153Prompt Template\u0153,\u0153id\u0153:\u0153Prompt Template-6nFyZ\u0153,\u0153name\u0153:\u0153prompt\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}",
+        "target": "Agent-MO9lm",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153system_prompt\u0153,\u0153id\u0153:\u0153Agent-MO9lm\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}"
       },
       {
         "animated": false,
@@ -91,7 +91,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "ChatInput",
-            "id": "ChatInput-1th4A",
+            "id": "ChatInput-Ocfak",
             "name": "message",
             "output_types": [
               "Message"
@@ -99,19 +99,19 @@
           },
           "targetHandle": {
             "fieldName": "input_value",
-            "id": "Agent-ioZUZ",
+            "id": "Agent-MO9lm",
             "inputTypes": [
               "Message"
             ],
             "type": "str"
           }
         },
-        "id": "reactflow__edge-ChatInput-1th4A{\u0153dataType\u0153:\u0153ChatInput\u0153,\u0153id\u0153:\u0153ChatInput-1th4A\u0153,\u0153name\u0153:\u0153message\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}-Agent-ioZUZ{\u0153fieldName\u0153:\u0153input_value\u0153,\u0153id\u0153:\u0153Agent-ioZUZ\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}",
+        "id": "reactflow__edge-ChatInput-Ocfak{\u0153dataType\u0153:\u0153ChatInput\u0153,\u0153id\u0153:\u0153ChatInput-Ocfak\u0153,\u0153name\u0153:\u0153message\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}-Agent-MO9lm{\u0153fieldName\u0153:\u0153input_value\u0153,\u0153id\u0153:\u0153Agent-MO9lm\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}",
         "selected": false,
-        "source": "ChatInput-1th4A",
-        "sourceHandle": "{\u0153dataType\u0153:\u0153ChatInput\u0153,\u0153id\u0153:\u0153ChatInput-1th4A\u0153,\u0153name\u0153:\u0153message\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}",
-        "target": "Agent-ioZUZ",
-        "targetHandle": "{\u0153fieldName\u0153:\u0153input_value\u0153,\u0153id\u0153:\u0153Agent-ioZUZ\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}"
+        "source": "ChatInput-Ocfak",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153ChatInput\u0153,\u0153id\u0153:\u0153ChatInput-Ocfak\u0153,\u0153name\u0153:\u0153message\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}",
+        "target": "Agent-MO9lm",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153input_value\u0153,\u0153id\u0153:\u0153Agent-MO9lm\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}"
       },
       {
         "animated": false,
@@ -119,7 +119,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "Prompt Template",
-            "id": "Prompt Template-GQ0dR",
+            "id": "Prompt Template-HvssP",
             "name": "prompt",
             "output_types": [
               "Message"
@@ -127,19 +127,19 @@
           },
           "targetHandle": {
             "fieldName": "system_prompt",
-            "id": "Agent-0QpLy",
+            "id": "Agent-1ImAQ",
             "inputTypes": [
               "Message"
             ],
             "type": "str"
           }
         },
-        "id": "reactflow__edge-Prompt Template-GQ0dR{\u0153dataType\u0153:\u0153Prompt Template\u0153,\u0153id\u0153:\u0153Prompt Template-GQ0dR\u0153,\u0153name\u0153:\u0153prompt\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}-Agent-0QpLy{\u0153fieldName\u0153:\u0153system_prompt\u0153,\u0153id\u0153:\u0153Agent-0QpLy\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}",
+        "id": "reactflow__edge-Prompt Template-HvssP{\u0153dataType\u0153:\u0153Prompt Template\u0153,\u0153id\u0153:\u0153Prompt Template-HvssP\u0153,\u0153name\u0153:\u0153prompt\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}-Agent-1ImAQ{\u0153fieldName\u0153:\u0153system_prompt\u0153,\u0153id\u0153:\u0153Agent-1ImAQ\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}",
         "selected": false,
-        "source": "Prompt Template-GQ0dR",
-        "sourceHandle": "{\u0153dataType\u0153:\u0153Prompt Template\u0153,\u0153id\u0153:\u0153Prompt Template-GQ0dR\u0153,\u0153name\u0153:\u0153prompt\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}",
-        "target": "Agent-0QpLy",
-        "targetHandle": "{\u0153fieldName\u0153:\u0153system_prompt\u0153,\u0153id\u0153:\u0153Agent-0QpLy\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}"
+        "source": "Prompt Template-HvssP",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153Prompt Template\u0153,\u0153id\u0153:\u0153Prompt Template-HvssP\u0153,\u0153name\u0153:\u0153prompt\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}",
+        "target": "Agent-1ImAQ",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153system_prompt\u0153,\u0153id\u0153:\u0153Agent-1ImAQ\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}"
       },
       {
         "animated": false,
@@ -147,7 +147,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "Prompt Template",
-            "id": "Prompt Template-2sd9k",
+            "id": "Prompt Template-S1aDq",
             "name": "prompt",
             "output_types": [
               "Message"
@@ -155,19 +155,19 @@
           },
           "targetHandle": {
             "fieldName": "system_prompt",
-            "id": "Agent-LF5C1",
+            "id": "Agent-Qtpjq",
             "inputTypes": [
               "Message"
             ],
             "type": "str"
           }
         },
-        "id": "reactflow__edge-Prompt Template-2sd9k{\u0153dataType\u0153:\u0153Prompt Template\u0153,\u0153id\u0153:\u0153Prompt Template-2sd9k\u0153,\u0153name\u0153:\u0153prompt\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}-Agent-LF5C1{\u0153fieldName\u0153:\u0153system_prompt\u0153,\u0153id\u0153:\u0153Agent-LF5C1\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}",
+        "id": "reactflow__edge-Prompt Template-S1aDq{\u0153dataType\u0153:\u0153Prompt Template\u0153,\u0153id\u0153:\u0153Prompt Template-S1aDq\u0153,\u0153name\u0153:\u0153prompt\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}-Agent-Qtpjq{\u0153fieldName\u0153:\u0153system_prompt\u0153,\u0153id\u0153:\u0153Agent-Qtpjq\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}",
         "selected": false,
-        "source": "Prompt Template-2sd9k",
-        "sourceHandle": "{\u0153dataType\u0153:\u0153Prompt Template\u0153,\u0153id\u0153:\u0153Prompt Template-2sd9k\u0153,\u0153name\u0153:\u0153prompt\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}",
-        "target": "Agent-LF5C1",
-        "targetHandle": "{\u0153fieldName\u0153:\u0153system_prompt\u0153,\u0153id\u0153:\u0153Agent-LF5C1\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}"
+        "source": "Prompt Template-S1aDq",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153Prompt Template\u0153,\u0153id\u0153:\u0153Prompt Template-S1aDq\u0153,\u0153name\u0153:\u0153prompt\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}",
+        "target": "Agent-Qtpjq",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153system_prompt\u0153,\u0153id\u0153:\u0153Agent-Qtpjq\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}"
       },
       {
         "animated": false,
@@ -175,7 +175,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "Agent",
-            "id": "Agent-0QpLy",
+            "id": "Agent-1ImAQ",
             "name": "component_as_tool",
             "output_types": [
               "Tool"
@@ -183,19 +183,19 @@
           },
           "targetHandle": {
             "fieldName": "tools",
-            "id": "Agent-ioZUZ",
+            "id": "Agent-MO9lm",
             "inputTypes": [
               "Tool"
             ],
             "type": "other"
           }
         },
-        "id": "reactflow__edge-Agent-0QpLy{\u0153dataType\u0153:\u0153Agent\u0153,\u0153id\u0153:\u0153Agent-0QpLy\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-ioZUZ{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-ioZUZ\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
+        "id": "reactflow__edge-Agent-1ImAQ{\u0153dataType\u0153:\u0153Agent\u0153,\u0153id\u0153:\u0153Agent-1ImAQ\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-MO9lm{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-MO9lm\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
         "selected": false,
-        "source": "Agent-0QpLy",
-        "sourceHandle": "{\u0153dataType\u0153:\u0153Agent\u0153,\u0153id\u0153:\u0153Agent-0QpLy\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
-        "target": "Agent-ioZUZ",
-        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-ioZUZ\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
+        "source": "Agent-1ImAQ",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153Agent\u0153,\u0153id\u0153:\u0153Agent-1ImAQ\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
+        "target": "Agent-MO9lm",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-MO9lm\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
       },
       {
         "animated": false,
@@ -203,7 +203,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "Agent",
-            "id": "Agent-ioZUZ",
+            "id": "Agent-MO9lm",
             "name": "response",
             "output_types": [
               "Message"
@@ -211,7 +211,7 @@
           },
           "targetHandle": {
             "fieldName": "input_value",
-            "id": "ChatOutput-y2qvY",
+            "id": "ChatOutput-1fETK",
             "inputTypes": [
               "Data",
               "DataFrame",
@@ -220,12 +220,12 @@
             "type": "str"
           }
         },
-        "id": "reactflow__edge-Agent-ioZUZ{\u0153dataType\u0153:\u0153Agent\u0153,\u0153id\u0153:\u0153Agent-ioZUZ\u0153,\u0153name\u0153:\u0153response\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}-ChatOutput-y2qvY{\u0153fieldName\u0153:\u0153input_value\u0153,\u0153id\u0153:\u0153ChatOutput-y2qvY\u0153,\u0153inputTypes\u0153:[\u0153Data\u0153,\u0153DataFrame\u0153,\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}",
+        "id": "reactflow__edge-Agent-MO9lm{\u0153dataType\u0153:\u0153Agent\u0153,\u0153id\u0153:\u0153Agent-MO9lm\u0153,\u0153name\u0153:\u0153response\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}-ChatOutput-1fETK{\u0153fieldName\u0153:\u0153input_value\u0153,\u0153id\u0153:\u0153ChatOutput-1fETK\u0153,\u0153inputTypes\u0153:[\u0153Data\u0153,\u0153DataFrame\u0153,\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}",
         "selected": false,
-        "source": "Agent-ioZUZ",
-        "sourceHandle": "{\u0153dataType\u0153:\u0153Agent\u0153,\u0153id\u0153:\u0153Agent-ioZUZ\u0153,\u0153name\u0153:\u0153response\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}",
-        "target": "ChatOutput-y2qvY",
-        "targetHandle": "{\u0153fieldName\u0153:\u0153input_value\u0153,\u0153id\u0153:\u0153ChatOutput-y2qvY\u0153,\u0153inputTypes\u0153:[\u0153Data\u0153,\u0153DataFrame\u0153,\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}"
+        "source": "Agent-MO9lm",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153Agent\u0153,\u0153id\u0153:\u0153Agent-MO9lm\u0153,\u0153name\u0153:\u0153response\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}",
+        "target": "ChatOutput-1fETK",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153input_value\u0153,\u0153id\u0153:\u0153ChatOutput-1fETK\u0153,\u0153inputTypes\u0153:[\u0153Data\u0153,\u0153DataFrame\u0153,\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}"
       },
       {
         "animated": false,
@@ -233,7 +233,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "Agent",
-            "id": "Agent-nPCiL",
+            "id": "Agent-BEjE7",
             "name": "component_as_tool",
             "output_types": [
               "Tool"
@@ -241,19 +241,19 @@
           },
           "targetHandle": {
             "fieldName": "tools",
-            "id": "Agent-ioZUZ",
+            "id": "Agent-MO9lm",
             "inputTypes": [
               "Tool"
             ],
             "type": "other"
           }
         },
-        "id": "reactflow__edge-Agent-nPCiL{\u0153dataType\u0153:\u0153Agent\u0153,\u0153id\u0153:\u0153Agent-nPCiL\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-ioZUZ{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-ioZUZ\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
+        "id": "reactflow__edge-Agent-BEjE7{\u0153dataType\u0153:\u0153Agent\u0153,\u0153id\u0153:\u0153Agent-BEjE7\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-MO9lm{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-MO9lm\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
         "selected": false,
-        "source": "Agent-nPCiL",
-        "sourceHandle": "{\u0153dataType\u0153:\u0153Agent\u0153,\u0153id\u0153:\u0153Agent-nPCiL\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
-        "target": "Agent-ioZUZ",
-        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-ioZUZ\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
+        "source": "Agent-BEjE7",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153Agent\u0153,\u0153id\u0153:\u0153Agent-BEjE7\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
+        "target": "Agent-MO9lm",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-MO9lm\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
       },
       {
         "animated": false,
@@ -261,7 +261,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "Agent",
-            "id": "Agent-LF5C1",
+            "id": "Agent-Qtpjq",
             "name": "component_as_tool",
             "output_types": [
               "Tool"
@@ -269,19 +269,19 @@
           },
           "targetHandle": {
             "fieldName": "tools",
-            "id": "Agent-ioZUZ",
+            "id": "Agent-MO9lm",
             "inputTypes": [
               "Tool"
             ],
             "type": "other"
           }
         },
-        "id": "reactflow__edge-Agent-LF5C1{\u0153dataType\u0153:\u0153Agent\u0153,\u0153id\u0153:\u0153Agent-LF5C1\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-ioZUZ{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-ioZUZ\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
+        "id": "reactflow__edge-Agent-Qtpjq{\u0153dataType\u0153:\u0153Agent\u0153,\u0153id\u0153:\u0153Agent-Qtpjq\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-MO9lm{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-MO9lm\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
         "selected": false,
-        "source": "Agent-LF5C1",
-        "sourceHandle": "{\u0153dataType\u0153:\u0153Agent\u0153,\u0153id\u0153:\u0153Agent-LF5C1\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
-        "target": "Agent-ioZUZ",
-        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-ioZUZ\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
+        "source": "Agent-Qtpjq",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153Agent\u0153,\u0153id\u0153:\u0153Agent-Qtpjq\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
+        "target": "Agent-MO9lm",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-MO9lm\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
       },
       {
         "animated": false,
@@ -289,7 +289,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "MongoDBAtlasVector",
-            "id": "MongoDBAtlasVector-tGzKg",
+            "id": "MongoDBAtlasVector-RH55o",
             "name": "component_as_tool",
             "output_types": [
               "Tool"
@@ -297,19 +297,19 @@
           },
           "targetHandle": {
             "fieldName": "tools",
-            "id": "Agent-LF5C1",
+            "id": "Agent-Qtpjq",
             "inputTypes": [
               "Tool"
             ],
             "type": "other"
           }
         },
-        "id": "reactflow__edge-MongoDBAtlasVector-tGzKg{\u0153dataType\u0153:\u0153MongoDBAtlasVector\u0153,\u0153id\u0153:\u0153MongoDBAtlasVector-tGzKg\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-LF5C1{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-LF5C1\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
+        "id": "reactflow__edge-MongoDBAtlasVector-RH55o{\u0153dataType\u0153:\u0153MongoDBAtlasVector\u0153,\u0153id\u0153:\u0153MongoDBAtlasVector-RH55o\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-Qtpjq{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-Qtpjq\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
         "selected": false,
-        "source": "MongoDBAtlasVector-tGzKg",
-        "sourceHandle": "{\u0153dataType\u0153:\u0153MongoDBAtlasVector\u0153,\u0153id\u0153:\u0153MongoDBAtlasVector-tGzKg\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
-        "target": "Agent-LF5C1",
-        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-LF5C1\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
+        "source": "MongoDBAtlasVector-RH55o",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153MongoDBAtlasVector\u0153,\u0153id\u0153:\u0153MongoDBAtlasVector-RH55o\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
+        "target": "Agent-Qtpjq",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-Qtpjq\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
       },
       {
         "animated": false,
@@ -317,7 +317,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "GoHighLevelBookAppointment",
-            "id": "GoHighLevelBookAppointment-xi8Gt",
+            "id": "GoHighLevelBookAppointment-MhWtM",
             "name": "component_as_tool",
             "output_types": [
               "Tool"
@@ -325,19 +325,19 @@
           },
           "targetHandle": {
             "fieldName": "tools",
-            "id": "Agent-nPCiL",
+            "id": "Agent-BEjE7",
             "inputTypes": [
               "Tool"
             ],
             "type": "other"
           }
         },
-        "id": "reactflow__edge-GoHighLevelBookAppointment-xi8Gt{\u0153dataType\u0153:\u0153GoHighLevelBookAppointment\u0153,\u0153id\u0153:\u0153GoHighLevelBookAppointment-xi8Gt\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-nPCiL{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-nPCiL\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
+        "id": "reactflow__edge-GoHighLevelBookAppointment-MhWtM{\u0153dataType\u0153:\u0153GoHighLevelBookAppointment\u0153,\u0153id\u0153:\u0153GoHighLevelBookAppointment-MhWtM\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-BEjE7{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-BEjE7\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
         "selected": false,
-        "source": "GoHighLevelBookAppointment-xi8Gt",
-        "sourceHandle": "{\u0153dataType\u0153:\u0153GoHighLevelBookAppointment\u0153,\u0153id\u0153:\u0153GoHighLevelBookAppointment-xi8Gt\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
-        "target": "Agent-nPCiL",
-        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-nPCiL\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
+        "source": "GoHighLevelBookAppointment-MhWtM",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153GoHighLevelBookAppointment\u0153,\u0153id\u0153:\u0153GoHighLevelBookAppointment-MhWtM\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
+        "target": "Agent-BEjE7",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-BEjE7\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
       },
       {
         "animated": false,
@@ -345,7 +345,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "GoHighLevelBookAppointment",
-            "id": "GoHighLevelBookAppointment-xi8Gt",
+            "id": "GoHighLevelBookAppointment-MhWtM",
             "name": "component_as_tool",
             "output_types": [
               "Tool"
@@ -353,19 +353,19 @@
           },
           "targetHandle": {
             "fieldName": "tools",
-            "id": "Agent-0QpLy",
+            "id": "Agent-1ImAQ",
             "inputTypes": [
               "Tool"
             ],
             "type": "other"
           }
         },
-        "id": "reactflow__edge-GoHighLevelBookAppointment-xi8Gt{\u0153dataType\u0153:\u0153GoHighLevelBookAppointment\u0153,\u0153id\u0153:\u0153GoHighLevelBookAppointment-xi8Gt\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-0QpLy{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-0QpLy\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
+        "id": "reactflow__edge-GoHighLevelBookAppointment-MhWtM{\u0153dataType\u0153:\u0153GoHighLevelBookAppointment\u0153,\u0153id\u0153:\u0153GoHighLevelBookAppointment-MhWtM\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-1ImAQ{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-1ImAQ\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
         "selected": false,
-        "source": "GoHighLevelBookAppointment-xi8Gt",
-        "sourceHandle": "{\u0153dataType\u0153:\u0153GoHighLevelBookAppointment\u0153,\u0153id\u0153:\u0153GoHighLevelBookAppointment-xi8Gt\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
-        "target": "Agent-0QpLy",
-        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-0QpLy\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
+        "source": "GoHighLevelBookAppointment-MhWtM",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153GoHighLevelBookAppointment\u0153,\u0153id\u0153:\u0153GoHighLevelBookAppointment-MhWtM\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
+        "target": "Agent-1ImAQ",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-1ImAQ\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
       },
       {
         "animated": false,
@@ -373,7 +373,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "GoHighLevelSendOTP",
-            "id": "GoHighLevelSendOTP-wVJBT",
+            "id": "GoHighLevelSendOTP-ub43W",
             "name": "component_as_tool",
             "output_types": [
               "Tool"
@@ -381,19 +381,19 @@
           },
           "targetHandle": {
             "fieldName": "tools",
-            "id": "Agent-0QpLy",
+            "id": "Agent-1ImAQ",
             "inputTypes": [
               "Tool"
             ],
             "type": "other"
           }
         },
-        "id": "reactflow__edge-GoHighLevelSendOTP-wVJBT{\u0153dataType\u0153:\u0153GoHighLevelSendOTP\u0153,\u0153id\u0153:\u0153GoHighLevelSendOTP-wVJBT\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-0QpLy{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-0QpLy\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
+        "id": "reactflow__edge-GoHighLevelSendOTP-ub43W{\u0153dataType\u0153:\u0153GoHighLevelSendOTP\u0153,\u0153id\u0153:\u0153GoHighLevelSendOTP-ub43W\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-1ImAQ{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-1ImAQ\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
         "selected": false,
-        "source": "GoHighLevelSendOTP-wVJBT",
-        "sourceHandle": "{\u0153dataType\u0153:\u0153GoHighLevelSendOTP\u0153,\u0153id\u0153:\u0153GoHighLevelSendOTP-wVJBT\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
-        "target": "Agent-0QpLy",
-        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-0QpLy\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
+        "source": "GoHighLevelSendOTP-ub43W",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153GoHighLevelSendOTP\u0153,\u0153id\u0153:\u0153GoHighLevelSendOTP-ub43W\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
+        "target": "Agent-1ImAQ",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-1ImAQ\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
       },
       {
         "animated": false,
@@ -401,7 +401,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "GoHighLevelVerifyOTP",
-            "id": "GoHighLevelVerifyOTP-iJBqZ",
+            "id": "GoHighLevelVerifyOTP-aGF6Q",
             "name": "component_as_tool",
             "output_types": [
               "Tool"
@@ -409,19 +409,19 @@
           },
           "targetHandle": {
             "fieldName": "tools",
-            "id": "Agent-0QpLy",
+            "id": "Agent-1ImAQ",
             "inputTypes": [
               "Tool"
             ],
             "type": "other"
           }
         },
-        "id": "reactflow__edge-GoHighLevelVerifyOTP-iJBqZ{\u0153dataType\u0153:\u0153GoHighLevelVerifyOTP\u0153,\u0153id\u0153:\u0153GoHighLevelVerifyOTP-iJBqZ\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-0QpLy{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-0QpLy\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
+        "id": "reactflow__edge-GoHighLevelVerifyOTP-aGF6Q{\u0153dataType\u0153:\u0153GoHighLevelVerifyOTP\u0153,\u0153id\u0153:\u0153GoHighLevelVerifyOTP-aGF6Q\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-1ImAQ{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-1ImAQ\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
         "selected": false,
-        "source": "GoHighLevelVerifyOTP-iJBqZ",
-        "sourceHandle": "{\u0153dataType\u0153:\u0153GoHighLevelVerifyOTP\u0153,\u0153id\u0153:\u0153GoHighLevelVerifyOTP-iJBqZ\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
-        "target": "Agent-0QpLy",
-        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-0QpLy\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
+        "source": "GoHighLevelVerifyOTP-aGF6Q",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153GoHighLevelVerifyOTP\u0153,\u0153id\u0153:\u0153GoHighLevelVerifyOTP-aGF6Q\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
+        "target": "Agent-1ImAQ",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-1ImAQ\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
       },
       {
         "animated": false,
@@ -429,7 +429,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "GoHighLevelGetAppointments",
-            "id": "GoHighLevelGetAppointments-oYv6F",
+            "id": "GoHighLevelGetAppointments-eh2Na",
             "name": "component_as_tool",
             "output_types": [
               "Tool"
@@ -437,19 +437,19 @@
           },
           "targetHandle": {
             "fieldName": "tools",
-            "id": "Agent-0QpLy",
+            "id": "Agent-1ImAQ",
             "inputTypes": [
               "Tool"
             ],
             "type": "other"
           }
         },
-        "id": "reactflow__edge-GoHighLevelGetAppointments-oYv6F{\u0153dataType\u0153:\u0153GoHighLevelGetAppointments\u0153,\u0153id\u0153:\u0153GoHighLevelGetAppointments-oYv6F\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-0QpLy{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-0QpLy\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
+        "id": "reactflow__edge-GoHighLevelGetAppointments-eh2Na{\u0153dataType\u0153:\u0153GoHighLevelGetAppointments\u0153,\u0153id\u0153:\u0153GoHighLevelGetAppointments-eh2Na\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-1ImAQ{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-1ImAQ\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
         "selected": false,
-        "source": "GoHighLevelGetAppointments-oYv6F",
-        "sourceHandle": "{\u0153dataType\u0153:\u0153GoHighLevelGetAppointments\u0153,\u0153id\u0153:\u0153GoHighLevelGetAppointments-oYv6F\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
-        "target": "Agent-0QpLy",
-        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-0QpLy\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
+        "source": "GoHighLevelGetAppointments-eh2Na",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153GoHighLevelGetAppointments\u0153,\u0153id\u0153:\u0153GoHighLevelGetAppointments-eh2Na\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
+        "target": "Agent-1ImAQ",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-1ImAQ\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
       },
       {
         "animated": false,
@@ -457,7 +457,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "GoHighLevelCancelAppointment",
-            "id": "GoHighLevelCancelAppointment-mo0BP",
+            "id": "GoHighLevelCancelAppointment-vWU5v",
             "name": "component_as_tool",
             "output_types": [
               "Tool"
@@ -465,19 +465,19 @@
           },
           "targetHandle": {
             "fieldName": "tools",
-            "id": "Agent-0QpLy",
+            "id": "Agent-1ImAQ",
             "inputTypes": [
               "Tool"
             ],
             "type": "other"
           }
         },
-        "id": "reactflow__edge-GoHighLevelCancelAppointment-mo0BP{\u0153dataType\u0153:\u0153GoHighLevelCancelAppointment\u0153,\u0153id\u0153:\u0153GoHighLevelCancelAppointment-mo0BP\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-0QpLy{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-0QpLy\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
+        "id": "reactflow__edge-GoHighLevelCancelAppointment-vWU5v{\u0153dataType\u0153:\u0153GoHighLevelCancelAppointment\u0153,\u0153id\u0153:\u0153GoHighLevelCancelAppointment-vWU5v\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-1ImAQ{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-1ImAQ\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
         "selected": false,
-        "source": "GoHighLevelCancelAppointment-mo0BP",
-        "sourceHandle": "{\u0153dataType\u0153:\u0153GoHighLevelCancelAppointment\u0153,\u0153id\u0153:\u0153GoHighLevelCancelAppointment-mo0BP\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
-        "target": "Agent-0QpLy",
-        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-0QpLy\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
+        "source": "GoHighLevelCancelAppointment-vWU5v",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153GoHighLevelCancelAppointment\u0153,\u0153id\u0153:\u0153GoHighLevelCancelAppointment-vWU5v\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
+        "target": "Agent-1ImAQ",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-1ImAQ\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
       },
       {
         "animated": false,
@@ -485,7 +485,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "Prompt Template",
-            "id": "Prompt Template-tXbi4",
+            "id": "Prompt Template-ywJfu",
             "name": "prompt",
             "output_types": [
               "Message"
@@ -493,19 +493,19 @@
           },
           "targetHandle": {
             "fieldName": "system_prompt",
-            "id": "Agent-d2M5z",
+            "id": "Agent-kbzuj",
             "inputTypes": [
               "Message"
             ],
             "type": "str"
           }
         },
-        "id": "reactflow__edge-Prompt Template-tXbi4{\u0153dataType\u0153:\u0153Prompt Template\u0153,\u0153id\u0153:\u0153Prompt Template-tXbi4\u0153,\u0153name\u0153:\u0153prompt\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}-Agent-d2M5z{\u0153fieldName\u0153:\u0153system_prompt\u0153,\u0153id\u0153:\u0153Agent-d2M5z\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}",
+        "id": "reactflow__edge-Prompt Template-ywJfu{\u0153dataType\u0153:\u0153Prompt Template\u0153,\u0153id\u0153:\u0153Prompt Template-ywJfu\u0153,\u0153name\u0153:\u0153prompt\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}-Agent-kbzuj{\u0153fieldName\u0153:\u0153system_prompt\u0153,\u0153id\u0153:\u0153Agent-kbzuj\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}",
         "selected": false,
-        "source": "Prompt Template-tXbi4",
-        "sourceHandle": "{\u0153dataType\u0153:\u0153Prompt Template\u0153,\u0153id\u0153:\u0153Prompt Template-tXbi4\u0153,\u0153name\u0153:\u0153prompt\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}",
-        "target": "Agent-d2M5z",
-        "targetHandle": "{\u0153fieldName\u0153:\u0153system_prompt\u0153,\u0153id\u0153:\u0153Agent-d2M5z\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}"
+        "source": "Prompt Template-ywJfu",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153Prompt Template\u0153,\u0153id\u0153:\u0153Prompt Template-ywJfu\u0153,\u0153name\u0153:\u0153prompt\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}",
+        "target": "Agent-kbzuj",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153system_prompt\u0153,\u0153id\u0153:\u0153Agent-kbzuj\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}"
       },
       {
         "animated": false,
@@ -513,7 +513,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "Agent",
-            "id": "Agent-d2M5z",
+            "id": "Agent-kbzuj",
             "name": "component_as_tool",
             "output_types": [
               "Tool"
@@ -521,19 +521,19 @@
           },
           "targetHandle": {
             "fieldName": "tools",
-            "id": "Agent-ioZUZ",
+            "id": "Agent-MO9lm",
             "inputTypes": [
               "Tool"
             ],
             "type": "other"
           }
         },
-        "id": "reactflow__edge-Agent-d2M5z{\u0153dataType\u0153:\u0153Agent\u0153,\u0153id\u0153:\u0153Agent-d2M5z\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-ioZUZ{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-ioZUZ\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
+        "id": "reactflow__edge-Agent-kbzuj{\u0153dataType\u0153:\u0153Agent\u0153,\u0153id\u0153:\u0153Agent-kbzuj\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-MO9lm{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-MO9lm\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
         "selected": false,
-        "source": "Agent-d2M5z",
-        "sourceHandle": "{\u0153dataType\u0153:\u0153Agent\u0153,\u0153id\u0153:\u0153Agent-d2M5z\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
-        "target": "Agent-ioZUZ",
-        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-ioZUZ\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
+        "source": "Agent-kbzuj",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153Agent\u0153,\u0153id\u0153:\u0153Agent-kbzuj\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
+        "target": "Agent-MO9lm",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-MO9lm\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
       },
       {
         "animated": false,
@@ -541,7 +541,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "GoHighLevelContactLookup",
-            "id": "GoHighLevelContactLookup-SGiJ4",
+            "id": "GoHighLevelContactLookup-iNoSK",
             "name": "component_as_tool",
             "output_types": [
               "Tool"
@@ -549,19 +549,19 @@
           },
           "targetHandle": {
             "fieldName": "tools",
-            "id": "Agent-d2M5z",
+            "id": "Agent-kbzuj",
             "inputTypes": [
               "Tool"
             ],
             "type": "other"
           }
         },
-        "id": "reactflow__edge-GoHighLevelContactLookup-SGiJ4{\u0153dataType\u0153:\u0153GoHighLevelContactLookup\u0153,\u0153id\u0153:\u0153GoHighLevelContactLookup-SGiJ4\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-d2M5z{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-d2M5z\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
+        "id": "reactflow__edge-GoHighLevelContactLookup-iNoSK{\u0153dataType\u0153:\u0153GoHighLevelContactLookup\u0153,\u0153id\u0153:\u0153GoHighLevelContactLookup-iNoSK\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-kbzuj{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-kbzuj\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
         "selected": false,
-        "source": "GoHighLevelContactLookup-SGiJ4",
-        "sourceHandle": "{\u0153dataType\u0153:\u0153GoHighLevelContactLookup\u0153,\u0153id\u0153:\u0153GoHighLevelContactLookup-SGiJ4\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
-        "target": "Agent-d2M5z",
-        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-d2M5z\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
+        "source": "GoHighLevelContactLookup-iNoSK",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153GoHighLevelContactLookup\u0153,\u0153id\u0153:\u0153GoHighLevelContactLookup-iNoSK\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
+        "target": "Agent-kbzuj",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-kbzuj\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
       },
       {
         "animated": false,
@@ -569,7 +569,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "GoHighLevelAvailableSlots",
-            "id": "GoHighLevelAvailableSlots-xUDa5",
+            "id": "GoHighLevelAvailableSlots-aMa0c",
             "name": "component_as_tool",
             "output_types": [
               "Tool"
@@ -577,19 +577,19 @@
           },
           "targetHandle": {
             "fieldName": "tools",
-            "id": "Agent-nPCiL",
+            "id": "Agent-BEjE7",
             "inputTypes": [
               "Tool"
             ],
             "type": "other"
           }
         },
-        "id": "reactflow__edge-GoHighLevelAvailableSlots-xUDa5{\u0153dataType\u0153:\u0153GoHighLevelAvailableSlots\u0153,\u0153id\u0153:\u0153GoHighLevelAvailableSlots-xUDa5\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-nPCiL{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-nPCiL\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
+        "id": "reactflow__edge-GoHighLevelAvailableSlots-aMa0c{\u0153dataType\u0153:\u0153GoHighLevelAvailableSlots\u0153,\u0153id\u0153:\u0153GoHighLevelAvailableSlots-aMa0c\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-BEjE7{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-BEjE7\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
         "selected": false,
-        "source": "GoHighLevelAvailableSlots-xUDa5",
-        "sourceHandle": "{\u0153dataType\u0153:\u0153GoHighLevelAvailableSlots\u0153,\u0153id\u0153:\u0153GoHighLevelAvailableSlots-xUDa5\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
-        "target": "Agent-nPCiL",
-        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-nPCiL\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
+        "source": "GoHighLevelAvailableSlots-aMa0c",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153GoHighLevelAvailableSlots\u0153,\u0153id\u0153:\u0153GoHighLevelAvailableSlots-aMa0c\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
+        "target": "Agent-BEjE7",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-BEjE7\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
       },
       {
         "animated": false,
@@ -597,7 +597,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "GoHighLevelAvailableSlots",
-            "id": "GoHighLevelAvailableSlots-xUDa5",
+            "id": "GoHighLevelAvailableSlots-aMa0c",
             "name": "component_as_tool",
             "output_types": [
               "Tool"
@@ -605,19 +605,19 @@
           },
           "targetHandle": {
             "fieldName": "tools",
-            "id": "Agent-0QpLy",
+            "id": "Agent-1ImAQ",
             "inputTypes": [
               "Tool"
             ],
             "type": "other"
           }
         },
-        "id": "reactflow__edge-GoHighLevelAvailableSlots-xUDa5{\u0153dataType\u0153:\u0153GoHighLevelAvailableSlots\u0153,\u0153id\u0153:\u0153GoHighLevelAvailableSlots-xUDa5\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-0QpLy{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-0QpLy\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
+        "id": "reactflow__edge-GoHighLevelAvailableSlots-aMa0c{\u0153dataType\u0153:\u0153GoHighLevelAvailableSlots\u0153,\u0153id\u0153:\u0153GoHighLevelAvailableSlots-aMa0c\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-1ImAQ{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-1ImAQ\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
         "selected": false,
-        "source": "GoHighLevelAvailableSlots-xUDa5",
-        "sourceHandle": "{\u0153dataType\u0153:\u0153GoHighLevelAvailableSlots\u0153,\u0153id\u0153:\u0153GoHighLevelAvailableSlots-xUDa5\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
-        "target": "Agent-0QpLy",
-        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-0QpLy\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
+        "source": "GoHighLevelAvailableSlots-aMa0c",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153GoHighLevelAvailableSlots\u0153,\u0153id\u0153:\u0153GoHighLevelAvailableSlots-aMa0c\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
+        "target": "Agent-1ImAQ",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-1ImAQ\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
       },
       {
         "animated": false,
@@ -625,7 +625,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "Prompt Template",
-            "id": "Prompt Template-p1n5y",
+            "id": "Prompt Template-RzFDs",
             "name": "prompt",
             "output_types": [
               "Message"
@@ -633,19 +633,19 @@
           },
           "targetHandle": {
             "fieldName": "system_prompt",
-            "id": "Agent-PfEy8",
+            "id": "Agent-FrOlG",
             "inputTypes": [
               "Message"
             ],
             "type": "str"
           }
         },
-        "id": "xy-edge__Prompt Template-p1n5y{\u0153dataType\u0153:\u0153Prompt Template\u0153,\u0153id\u0153:\u0153Prompt Template-p1n5y\u0153,\u0153name\u0153:\u0153prompt\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}-Agent-PfEy8{\u0153fieldName\u0153:\u0153system_prompt\u0153,\u0153id\u0153:\u0153Agent-PfEy8\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}",
+        "id": "reactflow__edge-Prompt Template-RzFDs{\u0153dataType\u0153:\u0153Prompt Template\u0153,\u0153id\u0153:\u0153Prompt Template-RzFDs\u0153,\u0153name\u0153:\u0153prompt\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}-Agent-FrOlG{\u0153fieldName\u0153:\u0153system_prompt\u0153,\u0153id\u0153:\u0153Agent-FrOlG\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}",
         "selected": false,
-        "source": "Prompt Template-p1n5y",
-        "sourceHandle": "{\u0153dataType\u0153:\u0153Prompt Template\u0153,\u0153id\u0153:\u0153Prompt Template-p1n5y\u0153,\u0153name\u0153:\u0153prompt\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}",
-        "target": "Agent-PfEy8",
-        "targetHandle": "{\u0153fieldName\u0153:\u0153system_prompt\u0153,\u0153id\u0153:\u0153Agent-PfEy8\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}"
+        "source": "Prompt Template-RzFDs",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153Prompt Template\u0153,\u0153id\u0153:\u0153Prompt Template-RzFDs\u0153,\u0153name\u0153:\u0153prompt\u0153,\u0153output_types\u0153:[\u0153Message\u0153]}",
+        "target": "Agent-FrOlG",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153system_prompt\u0153,\u0153id\u0153:\u0153Agent-FrOlG\u0153,\u0153inputTypes\u0153:[\u0153Message\u0153],\u0153type\u0153:\u0153str\u0153}"
       },
       {
         "animated": false,
@@ -653,7 +653,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "Agent",
-            "id": "Agent-PfEy8",
+            "id": "Agent-FrOlG",
             "name": "component_as_tool",
             "output_types": [
               "Tool"
@@ -661,19 +661,19 @@
           },
           "targetHandle": {
             "fieldName": "tools",
-            "id": "Agent-ioZUZ",
+            "id": "Agent-MO9lm",
             "inputTypes": [
               "Tool"
             ],
             "type": "other"
           }
         },
-        "id": "xy-edge__Agent-PfEy8{\u0153dataType\u0153:\u0153Agent\u0153,\u0153id\u0153:\u0153Agent-PfEy8\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-ioZUZ{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-ioZUZ\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
+        "id": "reactflow__edge-Agent-FrOlG{\u0153dataType\u0153:\u0153Agent\u0153,\u0153id\u0153:\u0153Agent-FrOlG\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-MO9lm{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-MO9lm\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
         "selected": false,
-        "source": "Agent-PfEy8",
-        "sourceHandle": "{\u0153dataType\u0153:\u0153Agent\u0153,\u0153id\u0153:\u0153Agent-PfEy8\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
-        "target": "Agent-ioZUZ",
-        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-ioZUZ\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
+        "source": "Agent-FrOlG",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153Agent\u0153,\u0153id\u0153:\u0153Agent-FrOlG\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
+        "target": "Agent-MO9lm",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-MO9lm\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
       },
       {
         "animated": false,
@@ -681,7 +681,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "JobberGetClients",
-            "id": "JobberGetClients-Ujy4X",
+            "id": "JobberGetClients-PapSF",
             "name": "component_as_tool",
             "output_types": [
               "Tool"
@@ -689,19 +689,19 @@
           },
           "targetHandle": {
             "fieldName": "tools",
-            "id": "Agent-PfEy8",
+            "id": "Agent-FrOlG",
             "inputTypes": [
               "Tool"
             ],
             "type": "other"
           }
         },
-        "id": "xy-edge__JobberGetClients-Ujy4X{\u0153dataType\u0153:\u0153JobberGetClients\u0153,\u0153id\u0153:\u0153JobberGetClients-Ujy4X\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-PfEy8{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-PfEy8\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
+        "id": "reactflow__edge-JobberGetClients-PapSF{\u0153dataType\u0153:\u0153JobberGetClients\u0153,\u0153id\u0153:\u0153JobberGetClients-PapSF\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-FrOlG{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-FrOlG\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
         "selected": false,
-        "source": "JobberGetClients-Ujy4X",
-        "sourceHandle": "{\u0153dataType\u0153:\u0153JobberGetClients\u0153,\u0153id\u0153:\u0153JobberGetClients-Ujy4X\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
-        "target": "Agent-PfEy8",
-        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-PfEy8\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
+        "source": "JobberGetClients-PapSF",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153JobberGetClients\u0153,\u0153id\u0153:\u0153JobberGetClients-PapSF\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
+        "target": "Agent-FrOlG",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-FrOlG\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
       },
       {
         "animated": false,
@@ -709,7 +709,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "JobberGetProperties",
-            "id": "JobberGetProperties-i1DLn",
+            "id": "JobberGetProperties-E9XBV",
             "name": "component_as_tool",
             "output_types": [
               "Tool"
@@ -717,19 +717,19 @@
           },
           "targetHandle": {
             "fieldName": "tools",
-            "id": "Agent-PfEy8",
+            "id": "Agent-FrOlG",
             "inputTypes": [
               "Tool"
             ],
             "type": "other"
           }
         },
-        "id": "xy-edge__JobberGetProperties-i1DLn{\u0153dataType\u0153:\u0153JobberGetProperties\u0153,\u0153id\u0153:\u0153JobberGetProperties-i1DLn\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-PfEy8{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-PfEy8\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
+        "id": "reactflow__edge-JobberGetProperties-E9XBV{\u0153dataType\u0153:\u0153JobberGetProperties\u0153,\u0153id\u0153:\u0153JobberGetProperties-E9XBV\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-FrOlG{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-FrOlG\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
         "selected": false,
-        "source": "JobberGetProperties-i1DLn",
-        "sourceHandle": "{\u0153dataType\u0153:\u0153JobberGetProperties\u0153,\u0153id\u0153:\u0153JobberGetProperties-i1DLn\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
-        "target": "Agent-PfEy8",
-        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-PfEy8\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
+        "source": "JobberGetProperties-E9XBV",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153JobberGetProperties\u0153,\u0153id\u0153:\u0153JobberGetProperties-E9XBV\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
+        "target": "Agent-FrOlG",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-FrOlG\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
       },
       {
         "animated": false,
@@ -737,7 +737,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "JobberGetJobs",
-            "id": "JobberGetJobs-1mWbh",
+            "id": "JobberGetJobs-nvF2H",
             "name": "component_as_tool",
             "output_types": [
               "Tool"
@@ -745,19 +745,19 @@
           },
           "targetHandle": {
             "fieldName": "tools",
-            "id": "Agent-PfEy8",
+            "id": "Agent-FrOlG",
             "inputTypes": [
               "Tool"
             ],
             "type": "other"
           }
         },
-        "id": "xy-edge__JobberGetJobs-1mWbh{\u0153dataType\u0153:\u0153JobberGetJobs\u0153,\u0153id\u0153:\u0153JobberGetJobs-1mWbh\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-PfEy8{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-PfEy8\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
+        "id": "reactflow__edge-JobberGetJobs-nvF2H{\u0153dataType\u0153:\u0153JobberGetJobs\u0153,\u0153id\u0153:\u0153JobberGetJobs-nvF2H\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-FrOlG{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-FrOlG\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
         "selected": false,
-        "source": "JobberGetJobs-1mWbh",
-        "sourceHandle": "{\u0153dataType\u0153:\u0153JobberGetJobs\u0153,\u0153id\u0153:\u0153JobberGetJobs-1mWbh\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
-        "target": "Agent-PfEy8",
-        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-PfEy8\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
+        "source": "JobberGetJobs-nvF2H",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153JobberGetJobs\u0153,\u0153id\u0153:\u0153JobberGetJobs-nvF2H\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
+        "target": "Agent-FrOlG",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-FrOlG\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
       },
       {
         "animated": false,
@@ -765,7 +765,7 @@
         "data": {
           "sourceHandle": {
             "dataType": "JobberGetVisits",
-            "id": "JobberGetVisits-NdCh2",
+            "id": "JobberGetVisits-DIRq2",
             "name": "component_as_tool",
             "output_types": [
               "Tool"
@@ -773,19 +773,19 @@
           },
           "targetHandle": {
             "fieldName": "tools",
-            "id": "Agent-PfEy8",
+            "id": "Agent-FrOlG",
             "inputTypes": [
               "Tool"
             ],
             "type": "other"
           }
         },
-        "id": "xy-edge__JobberGetVisits-NdCh2{\u0153dataType\u0153:\u0153JobberGetVisits\u0153,\u0153id\u0153:\u0153JobberGetVisits-NdCh2\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-PfEy8{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-PfEy8\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
+        "id": "reactflow__edge-JobberGetVisits-DIRq2{\u0153dataType\u0153:\u0153JobberGetVisits\u0153,\u0153id\u0153:\u0153JobberGetVisits-DIRq2\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}-Agent-FrOlG{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-FrOlG\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}",
         "selected": false,
-        "source": "JobberGetVisits-NdCh2",
-        "sourceHandle": "{\u0153dataType\u0153:\u0153JobberGetVisits\u0153,\u0153id\u0153:\u0153JobberGetVisits-NdCh2\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
-        "target": "Agent-PfEy8",
-        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-PfEy8\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
+        "source": "JobberGetVisits-DIRq2",
+        "sourceHandle": "{\u0153dataType\u0153:\u0153JobberGetVisits\u0153,\u0153id\u0153:\u0153JobberGetVisits-DIRq2\u0153,\u0153name\u0153:\u0153component_as_tool\u0153,\u0153output_types\u0153:[\u0153Tool\u0153]}",
+        "target": "Agent-FrOlG",
+        "targetHandle": "{\u0153fieldName\u0153:\u0153tools\u0153,\u0153id\u0153:\u0153Agent-FrOlG\u0153,\u0153inputTypes\u0153:[\u0153Tool\u0153],\u0153type\u0153:\u0153other\u0153}"
       }
     ],
     "nodes": [
@@ -793,7 +793,7 @@
         "data": {
           "description": "Get chat inputs from the Playground.",
           "display_name": "Chat Input",
-          "id": "ChatInput-1th4A",
+          "id": "ChatInput-Ocfak",
           "node": {
             "base_classes": [
               "Message"
@@ -1032,7 +1032,7 @@
         },
         "dragging": false,
         "height": 234,
-        "id": "ChatInput-1th4A",
+        "id": "ChatInput-Ocfak",
         "measured": {
           "height": 234,
           "width": 320
@@ -1053,7 +1053,7 @@
         "data": {
           "description": "Display a chat message in the Playground.",
           "display_name": "Chat Output",
-          "id": "ChatOutput-y2qvY",
+          "id": "ChatOutput-1fETK",
           "node": {
             "base_classes": [
               "Message"
@@ -1313,7 +1313,7 @@
         },
         "dragging": false,
         "height": 234,
-        "id": "ChatOutput-y2qvY",
+        "id": "ChatOutput-1fETK",
         "measured": {
           "height": 234,
           "width": 320
@@ -1334,7 +1334,7 @@
         "data": {
           "description": "MongoDB Atlas Vector Store with search capabilities",
           "display_name": "MongoDB Atlas",
-          "id": "MongoDBAtlasVector-tGzKg",
+          "id": "MongoDBAtlasVector-RH55o",
           "node": {
             "base_classes": [
               "Data",
@@ -1368,7 +1368,7 @@
             ],
             "frozen": false,
             "icon": "MongoDB",
-            "last_updated": "2026-04-05T09:19:49.996Z",
+            "last_updated": "2026-04-05T10:15:18.196Z",
             "legacy": false,
             "lf_version": "1.8.4",
             "metadata": {
@@ -1425,7 +1425,7 @@
             "pinned": false,
             "template": {
               "_frontend_node_flow_id": {
-                "value": "0274f8f2-6c27-4f67-8b0a-e9149ed89677"
+                "value": "4b029993-1e67-404c-9827-0bd0349f32ae"
               },
               "_frontend_node_folder_id": {
                 "value": "d75b52e2-84d0-467e-8174-52ad31bae79f"
@@ -1894,7 +1894,7 @@
           "type": "MongoDBAtlasVector"
         },
         "dragging": false,
-        "id": "MongoDBAtlasVector-tGzKg",
+        "id": "MongoDBAtlasVector-RH55o",
         "measured": {
           "height": 719,
           "width": 320
@@ -1908,7 +1908,7 @@
       },
       {
         "data": {
-          "id": "Google Generative AI Embeddings-BissY",
+          "id": "Google Generative AI Embeddings-WjCvI",
           "node": {
             "base_classes": [
               "Embeddings"
@@ -2043,7 +2043,7 @@
           "type": "Google Generative AI Embeddings"
         },
         "dragging": false,
-        "id": "Google Generative AI Embeddings-BissY",
+        "id": "Google Generative AI Embeddings-WjCvI",
         "measured": {
           "height": 337,
           "width": 320
@@ -2057,7 +2057,7 @@
       },
       {
         "data": {
-          "id": "Prompt Template-2sd9k",
+          "id": "Prompt Template-S1aDq",
           "node": {
             "base_classes": [
               "Message"
@@ -2217,7 +2217,7 @@
           "type": "Prompt Template"
         },
         "dragging": false,
-        "id": "Prompt Template-2sd9k",
+        "id": "Prompt Template-S1aDq",
         "measured": {
           "height": 265,
           "width": 320
@@ -2231,7 +2231,7 @@
       },
       {
         "data": {
-          "id": "Prompt Template-a0WGu",
+          "id": "Prompt Template-6nFyZ",
           "node": {
             "base_classes": [
               "Message"
@@ -2260,6 +2260,7 @@
             "is_input": null,
             "is_output": null,
             "legacy": false,
+            "lf_version": "1.8.4",
             "metadata": {
               "code_hash": "5b3e6730923e",
               "dependencies": {
@@ -2414,7 +2415,7 @@
           "type": "Prompt Template"
         },
         "dragging": false,
-        "id": "Prompt Template-a0WGu",
+        "id": "Prompt Template-6nFyZ",
         "measured": {
           "height": 347,
           "width": 320
@@ -2428,7 +2429,7 @@
       },
       {
         "data": {
-          "id": "Prompt Template-FG3Op",
+          "id": "Prompt Template-BD9ud",
           "node": {
             "base_classes": [
               "Message"
@@ -2455,6 +2456,7 @@
             "is_input": null,
             "is_output": null,
             "legacy": false,
+            "lf_version": "1.8.4",
             "metadata": {
               "code_hash": "5b3e6730923e",
               "dependencies": {
@@ -2587,7 +2589,7 @@
           "type": "Prompt Template"
         },
         "dragging": false,
-        "id": "Prompt Template-FG3Op",
+        "id": "Prompt Template-BD9ud",
         "measured": {
           "height": 265,
           "width": 320
@@ -2601,7 +2603,7 @@
       },
       {
         "data": {
-          "id": "Prompt Template-GQ0dR",
+          "id": "Prompt Template-HvssP",
           "node": {
             "base_classes": [
               "Message"
@@ -2761,7 +2763,7 @@
           "type": "Prompt Template"
         },
         "dragging": false,
-        "id": "Prompt Template-GQ0dR",
+        "id": "Prompt Template-HvssP",
         "measured": {
           "height": 265,
           "width": 320
@@ -2775,7 +2777,7 @@
       },
       {
         "data": {
-          "id": "Agent-ioZUZ",
+          "id": "Agent-MO9lm",
           "node": {
             "base_classes": [
               "Message"
@@ -2858,7 +2860,7 @@
             "template": {
               "_frontend_node_flow_id": {
                 "input_types": [],
-                "value": "0274f8f2-6c27-4f67-8b0a-e9149ed89677"
+                "value": "4b029993-1e67-404c-9827-0bd0349f32ae"
               },
               "_frontend_node_folder_id": {
                 "input_types": [],
@@ -3502,7 +3504,7 @@
           "type": "Agent"
         },
         "dragging": false,
-        "id": "Agent-ioZUZ",
+        "id": "Agent-MO9lm",
         "measured": {
           "height": 431,
           "width": 320
@@ -3516,7 +3518,7 @@
       },
       {
         "data": {
-          "id": "Agent-nPCiL",
+          "id": "Agent-BEjE7",
           "node": {
             "base_classes": [
               "Message"
@@ -3549,7 +3551,7 @@
             ],
             "frozen": false,
             "icon": "bot",
-            "last_updated": "2026-04-05T09:19:50.179Z",
+            "last_updated": "2026-04-05T10:15:18.251Z",
             "legacy": false,
             "lf_version": "1.8.4",
             "metadata": {
@@ -3598,7 +3600,7 @@
             "pinned": false,
             "template": {
               "_frontend_node_flow_id": {
-                "value": "0274f8f2-6c27-4f67-8b0a-e9149ed89677"
+                "value": "4b029993-1e67-404c-9827-0bd0349f32ae"
               },
               "_frontend_node_folder_id": {
                 "value": "d75b52e2-84d0-467e-8174-52ad31bae79f"
@@ -4283,7 +4285,7 @@
           "type": "Agent"
         },
         "dragging": false,
-        "id": "Agent-nPCiL",
+        "id": "Agent-BEjE7",
         "measured": {
           "height": 429,
           "width": 320
@@ -4297,7 +4299,7 @@
       },
       {
         "data": {
-          "id": "Agent-0QpLy",
+          "id": "Agent-1ImAQ",
           "node": {
             "base_classes": [
               "Message"
@@ -4330,7 +4332,7 @@
             ],
             "frozen": false,
             "icon": "bot",
-            "last_updated": "2026-04-05T09:19:50.180Z",
+            "last_updated": "2026-04-05T10:15:18.252Z",
             "legacy": false,
             "lf_version": "1.8.4",
             "metadata": {
@@ -4379,7 +4381,7 @@
             "pinned": false,
             "template": {
               "_frontend_node_flow_id": {
-                "value": "0274f8f2-6c27-4f67-8b0a-e9149ed89677"
+                "value": "4b029993-1e67-404c-9827-0bd0349f32ae"
               },
               "_frontend_node_folder_id": {
                 "value": "d75b52e2-84d0-467e-8174-52ad31bae79f"
@@ -5064,7 +5066,7 @@
           "type": "Agent"
         },
         "dragging": false,
-        "id": "Agent-0QpLy",
+        "id": "Agent-1ImAQ",
         "measured": {
           "height": 429,
           "width": 320
@@ -5078,7 +5080,7 @@
       },
       {
         "data": {
-          "id": "Agent-LF5C1",
+          "id": "Agent-Qtpjq",
           "node": {
             "base_classes": [
               "Message"
@@ -5111,7 +5113,7 @@
             ],
             "frozen": false,
             "icon": "bot",
-            "last_updated": "2026-04-05T09:19:50.181Z",
+            "last_updated": "2026-04-05T10:15:18.253Z",
             "legacy": false,
             "lf_version": "1.8.4",
             "metadata": {
@@ -5160,7 +5162,7 @@
             "pinned": false,
             "template": {
               "_frontend_node_flow_id": {
-                "value": "0274f8f2-6c27-4f67-8b0a-e9149ed89677"
+                "value": "4b029993-1e67-404c-9827-0bd0349f32ae"
               },
               "_frontend_node_folder_id": {
                 "value": "d75b52e2-84d0-467e-8174-52ad31bae79f"
@@ -5845,7 +5847,7 @@
           "type": "Agent"
         },
         "dragging": false,
-        "id": "Agent-LF5C1",
+        "id": "Agent-Qtpjq",
         "measured": {
           "height": 429,
           "width": 320
@@ -5859,7 +5861,7 @@
       },
       {
         "data": {
-          "id": "GoHighLevelBookAppointment-xi8Gt",
+          "id": "GoHighLevelBookAppointment-MhWtM",
           "node": {
             "base_classes": [
               "Message",
@@ -6174,7 +6176,7 @@
           "type": "GoHighLevelBookAppointment"
         },
         "dragging": false,
-        "id": "GoHighLevelBookAppointment-xi8Gt",
+        "id": "GoHighLevelBookAppointment-MhWtM",
         "measured": {
           "height": 567,
           "width": 320
@@ -6188,7 +6190,7 @@
       },
       {
         "data": {
-          "id": "GoHighLevelGetAppointments-oYv6F",
+          "id": "GoHighLevelGetAppointments-eh2Na",
           "node": {
             "base_classes": [
               "Message",
@@ -6429,21 +6431,21 @@
           "type": "GoHighLevelGetAppointments"
         },
         "dragging": false,
-        "id": "GoHighLevelGetAppointments-oYv6F",
+        "id": "GoHighLevelGetAppointments-eh2Na",
         "measured": {
           "height": 485,
           "width": 320
         },
         "position": {
-          "x": 671.1579918067766,
-          "y": 389.03234787516266
+          "x": 639.2608572445574,
+          "y": 890.2730338528879
         },
         "selected": false,
         "type": "genericNode"
       },
       {
         "data": {
-          "id": "GoHighLevelCancelAppointment-mo0BP",
+          "id": "GoHighLevelCancelAppointment-vWU5v",
           "node": {
             "base_classes": [
               "Message",
@@ -6716,7 +6718,7 @@
           "type": "GoHighLevelCancelAppointment"
         },
         "dragging": false,
-        "id": "GoHighLevelCancelAppointment-mo0BP",
+        "id": "GoHighLevelCancelAppointment-vWU5v",
         "measured": {
           "height": 485,
           "width": 320
@@ -6730,7 +6732,9 @@
       },
       {
         "data": {
-          "id": "GoHighLevelSendOTP-wVJBT",
+          "description": "Verifies the user's email and phone match the GHL contact record, then generates a 6-digit verification code and stores it on the contact. A GHL workflow sends the code via email. Use before allowing appointment queries or changes.",
+          "display_name": "GHL Send OTP",
+          "id": "GoHighLevelSendOTP-ub43W",
           "node": {
             "base_classes": [
               "Message",
@@ -6756,7 +6760,7 @@
             "legacy": false,
             "lf_version": "1.8.4",
             "metadata": {
-              "code_hash": "98056724c9ad",
+              "code_hash": "acf762ea4889",
               "dependencies": {
                 "dependencies": [
                   {
@@ -6848,7 +6852,7 @@
                 "show": true,
                 "title_case": false,
                 "type": "code",
-                "value": "\"\"\"\nGHL Send OTP\nGenerates a 6-digit OTP, stores it in a custom field on the GHL contact,\nand triggers a GHL workflow to send the code via email.\n\nBefore generating the code, this component verifies that BOTH the email\nand phone number provided by the user match the contact record in GHL.\nIf either doesn't match, the request is rejected \u2014 no code is sent and\nno appointment data is exposed.\n\nSecurity Flow:\n1. Look up the contact by email.\n2. Verify the phone provided by the user matches the phone on file.\n3. Only if both match \u2192 generate OTP, store it, trigger email workflow.\n\nGHL Setup Required (one-time, manual):\n1. Create custom field \"otp_code\" (text) on Contacts\n2. Create custom field \"otp_expires_at\" (text) on Contacts\n3. Create a workflow triggered on otp_code field change that sends an email:\n   Subject: \"Your verification code\"\n   Body: \"Your verification code is: {{contact.otp_code}}. It expires in 15 minutes.\"\n\nGHL API:\n- POST /contacts/search          \u2014 finds the contact by email\n- PUT  /contacts/{contactId}     \u2014 stores the OTP code and expiry in custom fields\n\nInputs (configured in Langflow):\n- contact_email        : The user's email address (tool_mode)\n- contact_phone        : The user's phone number (tool_mode)\n- api_key              : GHL Private Integration Token (secret)\n- location_id          : GHL Location (Sub-Account) ID\n- otp_code_field_key   : Custom field key for the OTP code (e.g. contact.otp_code)\n- otp_expiry_field_key : Custom field key for the expiry (e.g. contact.otp_expires_at)\n\nOutputs:\n- output            : Message with OTP_SENT or OTP_FAILED status\n- component_as_tool : Exposes this component as a tool for agents\n\nResponse Prefixes (used by agent prompts to branch logic):\n- \"OTP_SENT: ...\"   \u2014 contact verified, code generated and stored; email sent by workflow\n- \"OTP_FAILED: ...\" \u2014 email/phone mismatch, contact not found, or API error\n\"\"\"\n\nfrom lfx.custom.custom_component.component import Component\nfrom lfx.io import MessageTextInput, Output, SecretStrInput, StrInput\nfrom lfx.schema.message import Message\n\nimport httpx\nimport re\nimport secrets\nfrom datetime import datetime, timezone, timedelta\n\n\nGHL_BASE = \"https://services.leadconnectorhq.com\"\nGHL_VERSION = \"2021-07-28\"\n\nOTP_EXPIRY_MINUTES = 15\n\n\nclass GoHighLevelSendOTP(Component):\n    display_name = \"GHL Send OTP\"\n    description = (\n        \"Verifies the user's email and phone match the GHL contact record, \"\n        \"then generates a 6-digit verification code and stores it on the contact. \"\n        \"A GHL workflow sends the code via email. \"\n        \"Use before allowing appointment queries or changes.\"\n    )\n    icon = \"shield\"\n    name = \"GoHighLevelSendOTP\"\n\n    inputs = [\n        MessageTextInput(\n            name=\"contact_email\",\n            display_name=\"Email\",\n            info=\"The user's email address\",\n            tool_mode=True,\n        ),\n        MessageTextInput(\n            name=\"contact_phone\",\n            display_name=\"Phone\",\n            info=\"The user's phone number\",\n            tool_mode=True,\n        ),\n        SecretStrInput(\n            name=\"api_key\",\n            display_name=\"GHL API Key\",\n            info=\"GoHighLevel Private Integration Token\",\n        ),\n        StrInput(\n            name=\"location_id\",\n            display_name=\"Location ID\",\n            info=\"GoHighLevel Location (Sub-Account) ID\",\n        ),\n        StrInput(\n            name=\"otp_code_field_key\",\n            display_name=\"OTP Code Field Key\",\n            info=\"The custom field key in GHL for storing the OTP code (e.g. contact.otp_code)\",\n        ),\n        StrInput(\n            name=\"otp_expiry_field_key\",\n            display_name=\"OTP Expiry Field Key\",\n            info=\"The custom field key in GHL for storing the OTP expiry timestamp (e.g. contact.otp_expires_at)\",\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"OTP Result\", name=\"output\", method=\"send_otp\"),\n        Output(display_name=\"Toolset\", name=\"component_as_tool\", method=\"to_toolkit\", types=[\"Tool\"]),\n    ]\n\n    def _headers(self) -> dict:\n        return {\n            \"Authorization\": f\"Bearer {self.api_key}\",\n            \"Content-Type\": \"application/json\",\n            \"Version\": GHL_VERSION,\n        }\n\n    def _lookup_contact_by_email(self, client: httpx.Client, email: str) -> dict | None:\n        \"\"\"Search GHL contacts by email. Returns first match or None.\"\"\"\n        body = {\n            \"locationId\": self.location_id,\n            \"pageLimit\": 1,\n            \"filters\": [\n                {\n                    \"group\": \"AND\",\n                    \"filters\": [\n                        {\n                            \"field\": \"email\",\n                            \"operator\": \"eq\",\n                            \"value\": email,\n                        }\n                    ],\n                }\n            ],\n        }\n        resp = client.post(\n            f\"{GHL_BASE}/contacts/search\",\n            headers=self._headers(),\n            json=body,\n        )\n        resp.raise_for_status()\n        contacts = resp.json().get(\"contacts\", [])\n        return contacts[0] if contacts else None\n\n    @staticmethod\n    def _normalize_phone(phone: str) -> str:\n        \"\"\"Strip a phone number to digits only for comparison.\n\n        For 11-digit US numbers, drop a leading '1' so that\n        '+19522281752', '19522281752', '(952) 228-1752', and\n        '9522281752' all normalize to the same value.\n        \"\"\"\n        digits = re.sub(r\"\\D\", \"\", phone or \"\")\n        if len(digits) == 11 and digits.startswith(\"1\"):\n            digits = digits[1:]\n        return digits\n\n    def send_otp(self) -> Message:\n        \"\"\"Verify email + phone match the contact, then generate and store OTP.\n\n        Flow:\n        1. Look up the contact by email.\n        2. Verify the phone the user provided matches the phone on file.\n        3. If both match \u2192 generate a 6-digit code, store with 15-min expiry.\n        4. GHL workflow detects the field change and sends email (external).\n        5. Return OTP_SENT with masked email, or OTP_FAILED with reason.\n        \"\"\"\n        email = (self.contact_email or \"\").strip().lower()\n        phone = (self.contact_phone or \"\").strip()\n\n        if not email:\n            return self._msg(\"OTP_FAILED: No email address provided.\")\n        if not phone:\n            return self._msg(\"OTP_FAILED: No phone number provided.\")\n\n        try:\n            with httpx.Client(timeout=15.0) as client:\n                contact = self._lookup_contact_by_email(client, email)\n\n                if not contact:\n                    return self._msg(\n                        \"OTP_FAILED: The information provided does not match our records.\"\n                    )\n\n                contact_id = contact[\"id\"]\n                email_on_file = (contact.get(\"email\") or \"\").strip().lower()\n                phone_on_file = self._normalize_phone(contact.get(\"phone\") or \"\")\n                phone_provided = self._normalize_phone(phone)\n\n                # Verify email matches\n                if email != email_on_file:\n                    return self._msg(\n                        \"OTP_FAILED: The information provided does not match our records.\"\n                    )\n\n                # Verify phone matches\n                if not phone_on_file:\n                    return self._msg(\n                        \"OTP_FAILED: The information provided does not match our records.\"\n                    )\n\n                if phone_provided != phone_on_file:\n                    return self._msg(\n                        \"OTP_FAILED: The information provided does not match our records.\"\n                    )\n\n                # Both match \u2014 generate OTP\n                otp_code = f\"{secrets.randbelow(900000) + 100000}\"\n                expires_at = datetime.now(timezone.utc) + timedelta(minutes=OTP_EXPIRY_MINUTES)\n                expires_at_iso = expires_at.isoformat()\n\n                # Store OTP code and expiry on the contact's custom fields\n                update_body = {\n                    \"customFields\": [\n                        {\n                            \"key\": self.otp_code_field_key,\n                            \"value\": otp_code,\n                        },\n                        {\n                            \"key\": self.otp_expiry_field_key,\n                            \"value\": expires_at_iso,\n                        },\n                    ]\n                }\n\n                resp = client.put(\n                    f\"{GHL_BASE}/contacts/{contact_id}\",\n                    headers=self._headers(),\n                    json=update_body,\n                )\n                resp.raise_for_status()\n\n        except httpx.HTTPStatusError as exc:\n            return self._msg(\n                f\"OTP_FAILED: GHL API error: {exc.response.status_code} \u2014 {exc.response.text[:200]}\"\n            )\n        except httpx.TimeoutException:\n            return self._msg(\"OTP_FAILED: GHL API request timed out. Please try again.\")\n\n        # Mask the email for the response (show first 2 chars + domain)\n        at_idx = email.find(\"@\")\n        if at_idx > 2:\n            masked = email[:2] + \"***\" + email[at_idx:]\n        elif at_idx > 0:\n            masked = email[0] + \"***\" + email[at_idx:]\n        else:\n            masked = \"***\"\n\n        return self._msg(\n            f\"OTP_SENT: A {OTP_EXPIRY_MINUTES}-minute verification code has been sent \"\n            f\"via email to {masked}. Ask the user to check their inbox and provide the code.\"\n        )\n\n    def _msg(self, text: str) -> Message:\n        message = Message(text=text)\n        self.status = message\n        return message\n"
+                "value": "\"\"\"\nGHL Send OTP\nGenerates a 6-digit OTP, stores it in a custom field on the GHL contact,\nand triggers a GHL workflow to send the code via email.\n\nBefore generating the code, this component verifies that BOTH the email\nand phone number provided by the user match the contact record in GHL.\nIf either doesn't match, the request is rejected \u2014 no code is sent and\nno appointment data is exposed.\n\nSecurity Flow:\n1. Look up the contact by email.\n2. Verify the phone provided by the user matches the phone on file.\n3. Only if both match \u2192 generate OTP, store it, trigger email workflow.\n\nGHL Setup Required (one-time, manual):\n1. Create custom field \"otp_code\" (text) on Contacts\n2. Create custom field \"otp_expires_at\" (text) on Contacts\n3. Create a workflow triggered on otp_code field change that sends an email:\n   Subject: \"Your verification code\"\n   Body: \"Your verification code is: {{contact.otp_code}}. It expires in 15 minutes.\"\n\nGHL API:\n- POST /contacts/search          \u2014 finds the contact by email\n- PUT  /contacts/{contactId}     \u2014 stores the OTP code and expiry in custom fields\n\nInputs (configured in Langflow):\n- contact_email        : The user's email address (tool_mode)\n- contact_phone        : The user's phone number (tool_mode)\n- api_key              : GHL Private Integration Token (secret)\n- location_id          : GHL Location (Sub-Account) ID\n- otp_code_field_key   : Custom field key for the OTP code (e.g. contact.otp_code)\n- otp_expiry_field_key : Custom field key for the expiry (e.g. contact.otp_expires_at)\n\nOutputs:\n- output            : Message with OTP_SENT or OTP_FAILED status\n- component_as_tool : Exposes this component as a tool for agents\n\nResponse Prefixes (used by agent prompts to branch logic):\n- \"OTP_SENT: ...\"   \u2014 contact verified, code generated and stored; email sent by workflow\n- \"OTP_FAILED: ...\" \u2014 email/phone mismatch, contact not found, or API error\n\"\"\"\n\nfrom lfx.custom.custom_component.component import Component\nfrom lfx.io import MessageTextInput, Output, SecretStrInput, StrInput\nfrom lfx.schema.message import Message\n\nimport httpx\nimport re\nimport secrets\nfrom datetime import datetime, timezone, timedelta\n\n\nGHL_BASE = \"https://services.leadconnectorhq.com\"\nGHL_VERSION = \"2021-07-28\"\n\nOTP_EXPIRY_MINUTES = 15\n\n\nclass GoHighLevelSendOTP(Component):\n    display_name = \"GHL Send OTP\"\n    description = (\n        \"Verifies the user's email and phone match the GHL contact record, \"\n        \"then generates a 6-digit verification code and stores it on the contact. \"\n        \"A GHL workflow sends the code via email. \"\n        \"Use before allowing appointment queries or changes.\"\n    )\n    icon = \"shield\"\n    name = \"GoHighLevelSendOTP\"\n\n    inputs = [\n        MessageTextInput(\n            name=\"contact_email\",\n            display_name=\"Email\",\n            info=\"The user's email address\",\n            tool_mode=True,\n        ),\n        MessageTextInput(\n            name=\"contact_phone\",\n            display_name=\"Phone\",\n            info=\"The user's phone number\",\n            tool_mode=True,\n        ),\n        SecretStrInput(\n            name=\"api_key\",\n            display_name=\"GHL API Key\",\n            info=\"GoHighLevel Private Integration Token\",\n        ),\n        StrInput(\n            name=\"location_id\",\n            display_name=\"Location ID\",\n            info=\"GoHighLevel Location (Sub-Account) ID\",\n        ),\n        StrInput(\n            name=\"otp_code_field_key\",\n            display_name=\"OTP Code Field Key\",\n            info=\"The custom field key in GHL for storing the OTP code (e.g. contact.otp_code)\",\n        ),\n        StrInput(\n            name=\"otp_expiry_field_key\",\n            display_name=\"OTP Expiry Field Key\",\n            info=\"The custom field key in GHL for storing the OTP expiry timestamp (e.g. contact.otp_expires_at)\",\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"OTP Result\", name=\"output\", method=\"send_otp\"),\n        Output(display_name=\"Toolset\", name=\"component_as_tool\", method=\"to_toolkit\", types=[\"Tool\"]),\n    ]\n\n    def _headers(self) -> dict:\n        return {\n            \"Authorization\": f\"Bearer {self.api_key}\",\n            \"Content-Type\": \"application/json\",\n            \"Version\": GHL_VERSION,\n        }\n\n    def _resolve_field_id(self, client: httpx.Client, user_key: str) -> str:\n        \"\"\"Resolve a user-provided custom field key to the GHL field id.\n\n        Accepts either:\n        - A fieldKey (e.g. 'contact.otp_code' or 'otp_code')\n        - A raw GHL field id (returned as-is)\n\n        Raw IDs are assumed to contain no dot and to be ~20 chars of\n        base62. Anything else is looked up via the custom-fields\n        definitions endpoint and matched by fieldKey or name.\n\n        Result is memoized on self for the duration of the request.\n        \"\"\"\n        cache = getattr(self, \"_field_id_cache\", None)\n        if cache is None:\n            cache = {}\n            self._field_id_cache = cache\n        if user_key in cache:\n            return cache[user_key]\n\n        # Heuristic: raw GHL ids have no dot and are ~20 alphanum chars\n        if \".\" not in user_key and len(user_key) >= 15 and user_key.isalnum():\n            cache[user_key] = user_key\n            return user_key\n\n        resp = client.get(\n            f\"{GHL_BASE}/locations/{self.location_id}/customFields\",\n            headers=self._headers(),\n        )\n        resp.raise_for_status()\n        definitions = resp.json().get(\"customFields\", [])\n\n        want = user_key if user_key.startswith(\"contact.\") else f\"contact.{user_key}\"\n        for d in definitions:\n            if d.get(\"fieldKey\") == want or d.get(\"fieldKey\") == user_key or d.get(\"name\") == user_key:\n                cache[user_key] = d[\"id\"]\n                return d[\"id\"]\n\n        raise RuntimeError(\n            f\"Custom field '{user_key}' not found in GHL location {self.location_id}. \"\n            f\"Create it under Settings > Custom Fields, or use the field id directly.\"\n        )\n\n    def _lookup_contact_by_email(self, client: httpx.Client, email: str) -> dict | None:\n        \"\"\"Search GHL contacts by email. Returns first match or None.\"\"\"\n        body = {\n            \"locationId\": self.location_id,\n            \"pageLimit\": 1,\n            \"filters\": [\n                {\n                    \"group\": \"AND\",\n                    \"filters\": [\n                        {\n                            \"field\": \"email\",\n                            \"operator\": \"eq\",\n                            \"value\": email,\n                        }\n                    ],\n                }\n            ],\n        }\n        resp = client.post(\n            f\"{GHL_BASE}/contacts/search\",\n            headers=self._headers(),\n            json=body,\n        )\n        resp.raise_for_status()\n        contacts = resp.json().get(\"contacts\", [])\n        return contacts[0] if contacts else None\n\n    @staticmethod\n    def _normalize_phone(phone: str) -> str:\n        \"\"\"Strip a phone number to digits only for comparison.\n\n        For 11-digit US numbers, drop a leading '1' so that\n        '+19522281752', '19522281752', '(952) 228-1752', and\n        '9522281752' all normalize to the same value.\n        \"\"\"\n        digits = re.sub(r\"\\D\", \"\", phone or \"\")\n        if len(digits) == 11 and digits.startswith(\"1\"):\n            digits = digits[1:]\n        return digits\n\n    def send_otp(self) -> Message:\n        \"\"\"Verify email + phone match the contact, then generate and store OTP.\n\n        Flow:\n        1. Look up the contact by email.\n        2. Verify the phone the user provided matches the phone on file.\n        3. If both match \u2192 generate a 6-digit code, store with 15-min expiry.\n        4. GHL workflow detects the field change and sends email (external).\n        5. Return OTP_SENT with masked email, or OTP_FAILED with reason.\n        \"\"\"\n        email = (self.contact_email or \"\").strip().lower()\n        phone = (self.contact_phone or \"\").strip()\n\n        if not email:\n            return self._msg(\"OTP_FAILED: No email address provided.\")\n        if not phone:\n            return self._msg(\"OTP_FAILED: No phone number provided.\")\n\n        try:\n            with httpx.Client(timeout=15.0) as client:\n                contact = self._lookup_contact_by_email(client, email)\n\n                if not contact:\n                    return self._msg(\n                        \"OTP_FAILED: The information provided does not match our records.\"\n                    )\n\n                contact_id = contact[\"id\"]\n                email_on_file = (contact.get(\"email\") or \"\").strip().lower()\n                phone_on_file = self._normalize_phone(contact.get(\"phone\") or \"\")\n                phone_provided = self._normalize_phone(phone)\n\n                # Verify email matches\n                if email != email_on_file:\n                    return self._msg(\n                        \"OTP_FAILED: The information provided does not match our records.\"\n                    )\n\n                # Verify phone matches\n                if not phone_on_file:\n                    return self._msg(\n                        \"OTP_FAILED: The information provided does not match our records.\"\n                    )\n\n                if phone_provided != phone_on_file:\n                    return self._msg(\n                        \"OTP_FAILED: The information provided does not match our records.\"\n                    )\n\n                # Both match \u2014 generate OTP\n                otp_code = f\"{secrets.randbelow(900000) + 100000}\"\n                expires_at = datetime.now(timezone.utc) + timedelta(minutes=OTP_EXPIRY_MINUTES)\n                expires_at_iso = expires_at.isoformat()\n\n                # Resolve human-readable field keys \u2192 GHL field ids so we can\n                # write/read them reliably (GHL's contact API returns customFields\n                # with id populated but key=None).\n                code_field_id = self._resolve_field_id(client, self.otp_code_field_key)\n                expiry_field_id = self._resolve_field_id(client, self.otp_expiry_field_key)\n\n                # Store OTP code and expiry on the contact's custom fields\n                update_body = {\n                    \"customFields\": [\n                        {\n                            \"id\": code_field_id,\n                            \"value\": otp_code,\n                        },\n                        {\n                            \"id\": expiry_field_id,\n                            \"value\": expires_at_iso,\n                        },\n                    ]\n                }\n\n                resp = client.put(\n                    f\"{GHL_BASE}/contacts/{contact_id}\",\n                    headers=self._headers(),\n                    json=update_body,\n                )\n                resp.raise_for_status()\n\n        except httpx.HTTPStatusError as exc:\n            return self._msg(\n                f\"OTP_FAILED: GHL API error: {exc.response.status_code} \u2014 {exc.response.text[:200]}\"\n            )\n        except httpx.TimeoutException:\n            return self._msg(\"OTP_FAILED: GHL API request timed out. Please try again.\")\n\n        # Mask the email for the response (show first 2 chars + domain)\n        at_idx = email.find(\"@\")\n        if at_idx > 2:\n            masked = email[:2] + \"***\" + email[at_idx:]\n        elif at_idx > 0:\n            masked = email[0] + \"***\" + email[at_idx:]\n        else:\n            masked = \"***\"\n\n        return self._msg(\n            f\"OTP_SENT: A {OTP_EXPIRY_MINUTES}-minute verification code has been sent \"\n            f\"via email to {masked}. Ask the user to check their inbox and provide the code.\"\n        )\n\n    def _msg(self, text: str) -> Message:\n        message = Message(text=text)\n        self.status = message\n        return message\n"
               },
               "contact_email": {
                 "_input_type": "MessageTextInput",
@@ -6940,7 +6944,7 @@
                 "trace_as_metadata": true,
                 "track_in_telemetry": false,
                 "type": "str",
-                "value": "LW1RfPjAWGBTP1bTgSx7"
+                "value": "contact.otp_code"
               },
               "otp_expiry_field_key": {
                 "_input_type": "StrInput",
@@ -6961,7 +6965,7 @@
                 "trace_as_metadata": true,
                 "track_in_telemetry": false,
                 "type": "str",
-                "value": "LR4qj9wiL2VTyfh0AQ9g"
+                "value": "contact.otp_expires_at"
               }
             },
             "tool_mode": false
@@ -6971,21 +6975,21 @@
           "type": "GoHighLevelSendOTP"
         },
         "dragging": false,
-        "id": "GoHighLevelSendOTP-wVJBT",
+        "id": "GoHighLevelSendOTP-ub43W",
         "measured": {
           "height": 517,
           "width": 320
         },
         "position": {
-          "x": 668.0794895397146,
-          "y": 892.4399761010341
+          "x": 248.86000672198082,
+          "y": 326.2658376216491
         },
         "selected": false,
         "type": "genericNode"
       },
       {
         "data": {
-          "id": "GoHighLevelVerifyOTP-iJBqZ",
+          "id": "GoHighLevelVerifyOTP-aGF6Q",
           "node": {
             "base_classes": [
               "Message",
@@ -7103,7 +7107,7 @@
                 "show": true,
                 "title_case": false,
                 "type": "code",
-                "value": "\"\"\"\nGHL Verify OTP\nValidates a user-provided OTP code against the code stored on the\nGHL contact's custom fields. Clears the code after verification\n(success or expiry) to prevent reuse.\n\nSecurity Features:\n- Codes are cleared after successful verification (single-use).\n- Expired codes are cleared and rejected automatically.\n- The stored code is never exposed to the agent or user.\n\nGHL Setup Required (same as Send OTP):\n- Custom field \"otp_code\" (text) on Contacts\n- Custom field \"otp_expires_at\" (text) on Contacts\n\nGHL API:\n- POST /contacts/search          \u2014 finds the contact by email or phone\n- PUT  /contacts/{contactId}     \u2014 clears the OTP fields after verification\n\nInputs (configured in Langflow):\n- contact_identifier   : Email or phone to identify the contact (tool_mode)\n- otp_code             : The 6-digit code the user received via email (tool_mode)\n- api_key              : GHL Private Integration Token (secret)\n- location_id          : GHL Location (Sub-Account) ID\n- otp_code_field_key   : Custom field key for the stored OTP code\n- otp_expiry_field_key : Custom field key for the stored expiry timestamp\n\nOutputs:\n- output            : Message with VERIFIED or UNVERIFIED status\n- component_as_tool : Exposes this component as a tool for agents\n\nResponse Prefixes (used by agent prompts to branch logic):\n- \"VERIFIED: ...\"   \u2014 code matched and identity is confirmed\n- \"UNVERIFIED: ...\" \u2014 code wrong, expired, or no code was sent\n\"\"\"\n\nfrom lfx.custom.custom_component.component import Component\nfrom lfx.io import MessageTextInput, Output, SecretStrInput, StrInput\nfrom lfx.schema.message import Message\n\nimport httpx\nfrom datetime import datetime, timezone\n\n\nGHL_BASE = \"https://services.leadconnectorhq.com\"\nGHL_VERSION = \"2021-07-28\"\n\n\nclass GoHighLevelVerifyOTP(Component):\n    display_name = \"GHL Verify OTP\"\n    description = (\n        \"Validates a verification code provided by the user against the code \"\n        \"stored on their GHL contact record. Clears the code after verification.\"\n    )\n    icon = \"shield\"\n    name = \"GoHighLevelVerifyOTP\"\n\n    inputs = [\n        MessageTextInput(\n            name=\"contact_identifier\",\n            display_name=\"Phone or Email\",\n            info=\"The contact's phone number or email address\",\n            tool_mode=True,\n        ),\n        MessageTextInput(\n            name=\"otp_code\",\n            display_name=\"Verification Code\",\n            info=\"The 6-digit code the user received via email\",\n            tool_mode=True,\n        ),\n        SecretStrInput(\n            name=\"api_key\",\n            display_name=\"GHL API Key\",\n            info=\"GoHighLevel Private Integration Token\",\n        ),\n        StrInput(\n            name=\"location_id\",\n            display_name=\"Location ID\",\n            info=\"GoHighLevel Location (Sub-Account) ID\",\n        ),\n        StrInput(\n            name=\"otp_code_field_key\",\n            display_name=\"OTP Code Field Key\",\n            info=\"The custom field key in GHL for the stored OTP code (e.g. contact.otp_code)\",\n        ),\n        StrInput(\n            name=\"otp_expiry_field_key\",\n            display_name=\"OTP Expiry Field Key\",\n            info=\"The custom field key in GHL for the stored OTP expiry (e.g. contact.otp_expires_at)\",\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Verification Result\", name=\"output\", method=\"verify_otp\"),\n        Output(display_name=\"Toolset\", name=\"component_as_tool\", method=\"to_toolkit\", types=[\"Tool\"]),\n    ]\n\n    def _headers(self) -> dict:\n        return {\n            \"Authorization\": f\"Bearer {self.api_key}\",\n            \"Content-Type\": \"application/json\",\n            \"Version\": GHL_VERSION,\n        }\n\n    def _lookup_contact(self, client: httpx.Client) -> dict | None:\n        \"\"\"Search GHL contacts by email or phone.\"\"\"\n        identifier = self.contact_identifier.strip()\n        search_field = \"email\" if \"@\" in identifier else \"phone\"\n\n        body = {\n            \"locationId\": self.location_id,\n            \"pageLimit\": 1,\n            \"filters\": [\n                {\n                    \"group\": \"AND\",\n                    \"filters\": [\n                        {\n                            \"field\": search_field,\n                            \"operator\": \"eq\",\n                            \"value\": identifier,\n                        }\n                    ],\n                }\n            ],\n        }\n        resp = client.post(\n            f\"{GHL_BASE}/contacts/search\",\n            headers=self._headers(),\n            json=body,\n        )\n        resp.raise_for_status()\n        contacts = resp.json().get(\"contacts\", [])\n        return contacts[0] if contacts else None\n\n    def _clear_otp(self, client: httpx.Client, contact_id: str) -> None:\n        \"\"\"Clear the OTP fields on the contact to prevent reuse.\"\"\"\n        update_body = {\n            \"customFields\": [\n                {\"key\": self.otp_code_field_key, \"value\": \"\"},\n                {\"key\": self.otp_expiry_field_key, \"value\": \"\"},\n            ]\n        }\n        client.put(\n            f\"{GHL_BASE}/contacts/{contact_id}\",\n            headers=self._headers(),\n            json=update_body,\n        )\n\n    def _get_custom_field(self, contact: dict, field_key: str) -> str:\n        \"\"\"Extract a custom field value from a contact by its key.\"\"\"\n        for field in contact.get(\"customFields\", []):\n            if field.get(\"key\") == field_key or field.get(\"id\") == field_key:\n                return (field.get(\"value\") or \"\").strip()\n        return \"\"\n\n    def verify_otp(self) -> Message:\n        \"\"\"Validate the user's OTP code against the stored code.\n\n        Flow:\n        1. Look up the contact by email/phone.\n        2. Read the stored OTP code and expiry from custom fields.\n        3. If no code stored \u2192 UNVERIFIED (must send OTP first).\n        4. If code expired \u2192 clear fields, return UNVERIFIED.\n        5. If code matches \u2192 clear fields, return VERIFIED.\n        6. If code doesn't match \u2192 return UNVERIFIED (fields kept for retry).\n        \"\"\"\n        identifier = (self.contact_identifier or \"\").strip()\n        user_code = (self.otp_code or \"\").strip()\n\n        if not identifier:\n            return self._msg(\"UNVERIFIED: No contact identifier provided.\")\n        if not user_code:\n            return self._msg(\"UNVERIFIED: No verification code provided.\")\n\n        try:\n            with httpx.Client(timeout=15.0) as client:\n                contact = self._lookup_contact(client)\n\n                if not contact:\n                    return self._msg(\n                        f\"UNVERIFIED: No contact found matching '{identifier}'.\"\n                    )\n\n                contact_id = contact[\"id\"]\n                contact_name = (\n                    f\"{contact.get('firstName', '')} {contact.get('lastName', '')}\".strip()\n                    or identifier\n                )\n\n                # Read stored OTP and expiry from custom fields\n                stored_code = self._get_custom_field(contact, self.otp_code_field_key)\n                stored_expiry = self._get_custom_field(contact, self.otp_expiry_field_key)\n\n                if not stored_code:\n                    return self._msg(\n                        \"UNVERIFIED: No verification code was sent for this contact. \"\n                        \"Please request a new code first.\"\n                    )\n\n                # Check expiry\n                if stored_expiry:\n                    try:\n                        expiry_dt = datetime.fromisoformat(stored_expiry.replace(\"Z\", \"+00:00\"))\n                        if datetime.now(timezone.utc) > expiry_dt:\n                            self._clear_otp(client, contact_id)\n                            return self._msg(\n                                \"UNVERIFIED: The verification code has expired. \"\n                                \"Please request a new code.\"\n                            )\n                    except (ValueError, AttributeError):\n                        pass  # If expiry can't be parsed, skip the check\n\n                # Compare codes\n                if user_code == stored_code:\n                    self._clear_otp(client, contact_id)\n                    return self._msg(\n                        f\"VERIFIED: Identity confirmed for {contact_name}. \"\n                        \"You may proceed with appointment queries or changes.\"\n                    )\n                else:\n                    return self._msg(\n                        \"UNVERIFIED: The code does not match. \"\n                        \"Please double-check and try again, or request a new code.\"\n                    )\n\n        except httpx.HTTPStatusError as exc:\n            return self._msg(\n                f\"UNVERIFIED: GHL API error: {exc.response.status_code} \u2014 {exc.response.text[:200]}\"\n            )\n        except httpx.TimeoutException:\n            return self._msg(\"UNVERIFIED: GHL API request timed out. Please try again.\")\n\n    def _msg(self, text: str) -> Message:\n        message = Message(text=text)\n        self.status = message\n        return message\n"
+                "value": "\"\"\"\nGHL Verify OTP\nValidates a user-provided OTP code against the code stored on the\nGHL contact's custom fields. Clears the code after verification\n(success or expiry) to prevent reuse.\n\nSecurity Features:\n- Codes are cleared after successful verification (single-use).\n- Expired codes are cleared and rejected automatically.\n- The stored code is never exposed to the agent or user.\n\nGHL Setup Required (same as Send OTP):\n- Custom field \"otp_code\" (text) on Contacts\n- Custom field \"otp_expires_at\" (text) on Contacts\n\nGHL API:\n- POST /contacts/search          \u2014 finds the contact by email or phone\n- PUT  /contacts/{contactId}     \u2014 clears the OTP fields after verification\n\nInputs (configured in Langflow):\n- contact_identifier   : Email or phone to identify the contact (tool_mode)\n- otp_code             : The 6-digit code the user received via email (tool_mode)\n- api_key              : GHL Private Integration Token (secret)\n- location_id          : GHL Location (Sub-Account) ID\n- otp_code_field_key   : Custom field key for the stored OTP code\n- otp_expiry_field_key : Custom field key for the stored expiry timestamp\n\nOutputs:\n- output            : Message with VERIFIED or UNVERIFIED status\n- component_as_tool : Exposes this component as a tool for agents\n\nResponse Prefixes (used by agent prompts to branch logic):\n- \"VERIFIED: ...\"   \u2014 code matched and identity is confirmed\n- \"UNVERIFIED: ...\" \u2014 code wrong, expired, or no code was sent\n\"\"\"\n\nfrom lfx.custom.custom_component.component import Component\nfrom lfx.io import MessageTextInput, Output, SecretStrInput, StrInput\nfrom lfx.schema.message import Message\n\nimport httpx\nfrom datetime import datetime, timezone\n\n\nGHL_BASE = \"https://services.leadconnectorhq.com\"\nGHL_VERSION = \"2021-07-28\"\n\n\nclass GoHighLevelVerifyOTP(Component):\n    display_name = \"GHL Verify OTP\"\n    description = (\n        \"Validates a verification code provided by the user against the code \"\n        \"stored on their GHL contact record. Clears the code after verification.\"\n    )\n    icon = \"shield\"\n    name = \"GoHighLevelVerifyOTP\"\n\n    inputs = [\n        MessageTextInput(\n            name=\"contact_identifier\",\n            display_name=\"Phone or Email\",\n            info=\"The contact's phone number or email address\",\n            tool_mode=True,\n        ),\n        MessageTextInput(\n            name=\"otp_code\",\n            display_name=\"Verification Code\",\n            info=\"The 6-digit code the user received via email\",\n            tool_mode=True,\n        ),\n        SecretStrInput(\n            name=\"api_key\",\n            display_name=\"GHL API Key\",\n            info=\"GoHighLevel Private Integration Token\",\n        ),\n        StrInput(\n            name=\"location_id\",\n            display_name=\"Location ID\",\n            info=\"GoHighLevel Location (Sub-Account) ID\",\n        ),\n        StrInput(\n            name=\"otp_code_field_key\",\n            display_name=\"OTP Code Field Key\",\n            info=\"The custom field key in GHL for the stored OTP code (e.g. contact.otp_code)\",\n        ),\n        StrInput(\n            name=\"otp_expiry_field_key\",\n            display_name=\"OTP Expiry Field Key\",\n            info=\"The custom field key in GHL for the stored OTP expiry (e.g. contact.otp_expires_at)\",\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Verification Result\", name=\"output\", method=\"verify_otp\"),\n        Output(display_name=\"Toolset\", name=\"component_as_tool\", method=\"to_toolkit\", types=[\"Tool\"]),\n    ]\n\n    def _headers(self) -> dict:\n        return {\n            \"Authorization\": f\"Bearer {self.api_key}\",\n            \"Content-Type\": \"application/json\",\n            \"Version\": GHL_VERSION,\n        }\n\n    def _resolve_field_id(self, client: httpx.Client, user_key: str) -> str:\n        \"\"\"Resolve a user-provided custom field key to the GHL field id.\n\n        Accepts either:\n        - A fieldKey (e.g. 'contact.otp_code' or 'otp_code')\n        - A raw GHL field id (returned as-is)\n\n        Raw IDs are assumed to contain no dot and to be ~20 chars of\n        base62. Anything else is looked up via the custom-fields\n        definitions endpoint and matched by fieldKey or name.\n\n        Result is memoized on self for the duration of the request.\n        \"\"\"\n        cache = getattr(self, \"_field_id_cache\", None)\n        if cache is None:\n            cache = {}\n            self._field_id_cache = cache\n        if user_key in cache:\n            return cache[user_key]\n\n        if \".\" not in user_key and len(user_key) >= 15 and user_key.isalnum():\n            cache[user_key] = user_key\n            return user_key\n\n        resp = client.get(\n            f\"{GHL_BASE}/locations/{self.location_id}/customFields\",\n            headers=self._headers(),\n        )\n        resp.raise_for_status()\n        definitions = resp.json().get(\"customFields\", [])\n\n        want = user_key if user_key.startswith(\"contact.\") else f\"contact.{user_key}\"\n        for d in definitions:\n            if d.get(\"fieldKey\") == want or d.get(\"fieldKey\") == user_key or d.get(\"name\") == user_key:\n                cache[user_key] = d[\"id\"]\n                return d[\"id\"]\n\n        raise RuntimeError(\n            f\"Custom field '{user_key}' not found in GHL location {self.location_id}. \"\n            f\"Create it under Settings > Custom Fields, or use the field id directly.\"\n        )\n\n    def _lookup_contact(self, client: httpx.Client) -> dict | None:\n        \"\"\"Search GHL contacts by email or phone.\"\"\"\n        identifier = self.contact_identifier.strip()\n        search_field = \"email\" if \"@\" in identifier else \"phone\"\n\n        body = {\n            \"locationId\": self.location_id,\n            \"pageLimit\": 1,\n            \"filters\": [\n                {\n                    \"group\": \"AND\",\n                    \"filters\": [\n                        {\n                            \"field\": search_field,\n                            \"operator\": \"eq\",\n                            \"value\": identifier,\n                        }\n                    ],\n                }\n            ],\n        }\n        resp = client.post(\n            f\"{GHL_BASE}/contacts/search\",\n            headers=self._headers(),\n            json=body,\n        )\n        resp.raise_for_status()\n        contacts = resp.json().get(\"contacts\", [])\n        return contacts[0] if contacts else None\n\n    def _clear_otp(self, client: httpx.Client, contact_id: str, code_field_id: str, expiry_field_id: str) -> None:\n        \"\"\"Clear the OTP fields on the contact to prevent reuse.\"\"\"\n        update_body = {\n            \"customFields\": [\n                {\"id\": code_field_id, \"value\": \"\"},\n                {\"id\": expiry_field_id, \"value\": \"\"},\n            ]\n        }\n        client.put(\n            f\"{GHL_BASE}/contacts/{contact_id}\",\n            headers=self._headers(),\n            json=update_body,\n        )\n\n    def _get_custom_field(self, contact: dict, field_id: str) -> str:\n        \"\"\"Extract a custom field value from a contact by its id.\"\"\"\n        for field in contact.get(\"customFields\", []):\n            if field.get(\"id\") == field_id:\n                value = field.get(\"value\") or \"\"\n                # GHL sometimes wraps scalar values in a list\n                if isinstance(value, list):\n                    value = value[0] if value else \"\"\n                return str(value).strip()\n        return \"\"\n\n    def verify_otp(self) -> Message:\n        \"\"\"Validate the user's OTP code against the stored code.\n\n        Flow:\n        1. Look up the contact by email/phone.\n        2. Read the stored OTP code and expiry from custom fields.\n        3. If no code stored \u2192 UNVERIFIED (must send OTP first).\n        4. If code expired \u2192 clear fields, return UNVERIFIED.\n        5. If code matches \u2192 clear fields, return VERIFIED.\n        6. If code doesn't match \u2192 return UNVERIFIED (fields kept for retry).\n        \"\"\"\n        identifier = (self.contact_identifier or \"\").strip()\n        user_code = (self.otp_code or \"\").strip()\n\n        if not identifier:\n            return self._msg(\"UNVERIFIED: No contact identifier provided.\")\n        if not user_code:\n            return self._msg(\"UNVERIFIED: No verification code provided.\")\n\n        try:\n            with httpx.Client(timeout=15.0) as client:\n                contact = self._lookup_contact(client)\n\n                if not contact:\n                    return self._msg(\n                        f\"UNVERIFIED: No contact found matching '{identifier}'.\"\n                    )\n\n                contact_id = contact[\"id\"]\n                contact_name = (\n                    f\"{contact.get('firstName', '')} {contact.get('lastName', '')}\".strip()\n                    or identifier\n                )\n\n                # Resolve human-readable field keys \u2192 GHL field ids (contact search\n                # returns customFields with id populated but key=None, so we must\n                # match by id).\n                code_field_id = self._resolve_field_id(client, self.otp_code_field_key)\n                expiry_field_id = self._resolve_field_id(client, self.otp_expiry_field_key)\n\n                # Read stored OTP and expiry from custom fields\n                stored_code = self._get_custom_field(contact, code_field_id)\n                stored_expiry = self._get_custom_field(contact, expiry_field_id)\n\n                if not stored_code:\n                    return self._msg(\n                        \"UNVERIFIED: No verification code was sent for this contact. \"\n                        \"Please request a new code first.\"\n                    )\n\n                # Check expiry\n                if stored_expiry:\n                    try:\n                        expiry_dt = datetime.fromisoformat(stored_expiry.replace(\"Z\", \"+00:00\"))\n                        if datetime.now(timezone.utc) > expiry_dt:\n                            self._clear_otp(client, contact_id, code_field_id, expiry_field_id)\n                            return self._msg(\n                                \"UNVERIFIED: The verification code has expired. \"\n                                \"Please request a new code.\"\n                            )\n                    except (ValueError, AttributeError):\n                        pass  # If expiry can't be parsed, skip the check\n\n                # Compare codes\n                if user_code == stored_code:\n                    self._clear_otp(client, contact_id, code_field_id, expiry_field_id)\n                    return self._msg(\n                        f\"VERIFIED: Identity confirmed for {contact_name}. \"\n                        \"You may proceed with appointment queries or changes.\"\n                    )\n                else:\n                    return self._msg(\n                        \"UNVERIFIED: The code does not match. \"\n                        \"Please double-check and try again, or request a new code.\"\n                    )\n\n        except httpx.HTTPStatusError as exc:\n            return self._msg(\n                f\"UNVERIFIED: GHL API error: {exc.response.status_code} \u2014 {exc.response.text[:200]}\"\n            )\n        except httpx.TimeoutException:\n            return self._msg(\"UNVERIFIED: GHL API request timed out. Please try again.\")\n\n    def _msg(self, text: str) -> Message:\n        message = Message(text=text)\n        self.status = message\n        return message\n"
               },
               "contact_identifier": {
                 "_input_type": "MessageTextInput",
@@ -7195,7 +7199,7 @@
                 "trace_as_metadata": true,
                 "track_in_telemetry": false,
                 "type": "str",
-                "value": "LW1RfPjAWGBTP1bTgSx7"
+                "value": "contact.otp_code"
               },
               "otp_expiry_field_key": {
                 "_input_type": "StrInput",
@@ -7216,7 +7220,7 @@
                 "trace_as_metadata": true,
                 "track_in_telemetry": false,
                 "type": "str",
-                "value": "LR4qj9wiL2VTyfh0AQ9g"
+                "value": "contact.otp_expires_at"
               }
             },
             "tool_mode": false
@@ -7226,21 +7230,21 @@
           "type": "GoHighLevelVerifyOTP"
         },
         "dragging": false,
-        "id": "GoHighLevelVerifyOTP-iJBqZ",
+        "id": "GoHighLevelVerifyOTP-aGF6Q",
         "measured": {
           "height": 485,
           "width": 320
         },
         "position": {
-          "x": 278.96007922077735,
-          "y": 386.5104471131905
+          "x": 602.4881583518545,
+          "y": 331.8296450065296
         },
         "selected": false,
         "type": "genericNode"
       },
       {
         "data": {
-          "id": "GoHighLevelContactLookup-SGiJ4",
+          "id": "GoHighLevelContactLookup-iNoSK",
           "node": {
             "base_classes": [
               "Message",
@@ -7432,7 +7436,7 @@
           "type": "GoHighLevelContactLookup"
         },
         "dragging": false,
-        "id": "GoHighLevelContactLookup-SGiJ4",
+        "id": "GoHighLevelContactLookup-iNoSK",
         "measured": {
           "height": 419,
           "width": 320
@@ -7446,7 +7450,7 @@
       },
       {
         "data": {
-          "id": "Agent-d2M5z",
+          "id": "Agent-kbzuj",
           "node": {
             "base_classes": [
               "Message"
@@ -7479,7 +7483,7 @@
             ],
             "frozen": false,
             "icon": "bot",
-            "last_updated": "2026-04-05T09:19:50.181Z",
+            "last_updated": "2026-04-05T10:15:18.253Z",
             "legacy": false,
             "lf_version": "1.8.4",
             "metadata": {
@@ -7528,7 +7532,7 @@
             "pinned": false,
             "template": {
               "_frontend_node_flow_id": {
-                "value": "0274f8f2-6c27-4f67-8b0a-e9149ed89677"
+                "value": "4b029993-1e67-404c-9827-0bd0349f32ae"
               },
               "_frontend_node_folder_id": {
                 "value": "d75b52e2-84d0-467e-8174-52ad31bae79f"
@@ -8213,7 +8217,7 @@
           "type": "Agent"
         },
         "dragging": false,
-        "id": "Agent-d2M5z",
+        "id": "Agent-kbzuj",
         "measured": {
           "height": 429,
           "width": 320
@@ -8227,7 +8231,7 @@
       },
       {
         "data": {
-          "id": "Prompt Template-tXbi4",
+          "id": "Prompt Template-ywJfu",
           "node": {
             "base_classes": [
               "Message"
@@ -8256,6 +8260,7 @@
             "is_input": null,
             "is_output": null,
             "legacy": false,
+            "lf_version": "1.8.4",
             "metadata": {
               "code_hash": "5b3e6730923e",
               "dependencies": {
@@ -8410,7 +8415,7 @@
           "type": "Prompt Template"
         },
         "dragging": false,
-        "id": "Prompt Template-tXbi4",
+        "id": "Prompt Template-ywJfu",
         "measured": {
           "height": 347,
           "width": 320
@@ -8424,7 +8429,7 @@
       },
       {
         "data": {
-          "id": "GoHighLevelAvailableSlots-xUDa5",
+          "id": "GoHighLevelAvailableSlots-aMa0c",
           "node": {
             "base_classes": [
               "Message",
@@ -8658,7 +8663,7 @@
           "type": "GoHighLevelAvailableSlots"
         },
         "dragging": false,
-        "id": "GoHighLevelAvailableSlots-xUDa5",
+        "id": "GoHighLevelAvailableSlots-aMa0c",
         "measured": {
           "height": 501,
           "width": 320
@@ -8672,7 +8677,7 @@
       },
       {
         "data": {
-          "id": "Agent-PfEy8",
+          "id": "Agent-FrOlG",
           "node": {
             "base_classes": [
               "Message"
@@ -8705,8 +8710,9 @@
             ],
             "frozen": false,
             "icon": "bot",
-            "last_updated": "2026-04-05T09:19:50.182Z",
+            "last_updated": "2026-04-05T10:15:18.254Z",
             "legacy": false,
+            "lf_version": "1.8.4",
             "metadata": {
               "code_hash": "40d1976f4718",
               "dependencies": {
@@ -8753,7 +8759,7 @@
             "pinned": false,
             "template": {
               "_frontend_node_flow_id": {
-                "value": "0274f8f2-6c27-4f67-8b0a-e9149ed89677"
+                "value": "4b029993-1e67-404c-9827-0bd0349f32ae"
               },
               "_frontend_node_folder_id": {
                 "value": "d75b52e2-84d0-467e-8174-52ad31bae79f"
@@ -9437,7 +9443,7 @@
           "type": "Agent"
         },
         "dragging": false,
-        "id": "Agent-PfEy8",
+        "id": "Agent-FrOlG",
         "measured": {
           "height": 429,
           "width": 320
@@ -9451,7 +9457,7 @@
       },
       {
         "data": {
-          "id": "Prompt Template-p1n5y",
+          "id": "Prompt Template-RzFDs",
           "node": {
             "base_classes": [
               "Message"
@@ -9480,6 +9486,7 @@
             "is_input": null,
             "is_output": null,
             "legacy": false,
+            "lf_version": "1.8.4",
             "metadata": {
               "code_hash": "5b3e6730923e",
               "dependencies": {
@@ -9634,7 +9641,7 @@
           "type": "Prompt Template"
         },
         "dragging": false,
-        "id": "Prompt Template-p1n5y",
+        "id": "Prompt Template-RzFDs",
         "measured": {
           "height": 347,
           "width": 320
@@ -9648,7 +9655,7 @@
       },
       {
         "data": {
-          "id": "JobberGetClients-Ujy4X",
+          "id": "JobberGetClients-PapSF",
           "node": {
             "base_classes": [
               "Message",
@@ -9669,6 +9676,7 @@
             "frozen": false,
             "icon": "users",
             "legacy": false,
+            "lf_version": "1.8.4",
             "metadata": {
               "code_hash": "c93db8c5469c",
               "dependencies": {
@@ -9809,7 +9817,7 @@
           "type": "JobberGetClients"
         },
         "dragging": false,
-        "id": "JobberGetClients-Ujy4X",
+        "id": "JobberGetClients-PapSF",
         "measured": {
           "height": 353,
           "width": 320
@@ -9823,7 +9831,7 @@
       },
       {
         "data": {
-          "id": "JobberGetProperties-i1DLn",
+          "id": "JobberGetProperties-E9XBV",
           "node": {
             "base_classes": [
               "Message",
@@ -9844,6 +9852,7 @@
             "frozen": false,
             "icon": "map-pin",
             "legacy": false,
+            "lf_version": "1.8.4",
             "metadata": {
               "code_hash": "2bac16187d81",
               "dependencies": {
@@ -9984,7 +9993,7 @@
           "type": "JobberGetProperties"
         },
         "dragging": false,
-        "id": "JobberGetProperties-i1DLn",
+        "id": "JobberGetProperties-E9XBV",
         "measured": {
           "height": 321,
           "width": 320
@@ -9998,7 +10007,7 @@
       },
       {
         "data": {
-          "id": "JobberGetJobs-1mWbh",
+          "id": "JobberGetJobs-nvF2H",
           "node": {
             "base_classes": [
               "Message",
@@ -10019,6 +10028,7 @@
             "frozen": false,
             "icon": "briefcase",
             "legacy": false,
+            "lf_version": "1.8.4",
             "metadata": {
               "code_hash": "3d263fb27c6e",
               "dependencies": {
@@ -10159,7 +10169,7 @@
           "type": "JobberGetJobs"
         },
         "dragging": false,
-        "id": "JobberGetJobs-1mWbh",
+        "id": "JobberGetJobs-nvF2H",
         "measured": {
           "height": 305,
           "width": 320
@@ -10173,7 +10183,7 @@
       },
       {
         "data": {
-          "id": "JobberGetVisits-NdCh2",
+          "id": "JobberGetVisits-DIRq2",
           "node": {
             "base_classes": [
               "Message",
@@ -10194,6 +10204,7 @@
             "frozen": false,
             "icon": "calendar-check",
             "legacy": false,
+            "lf_version": "1.8.4",
             "metadata": {
               "code_hash": "121a9f564786",
               "dependencies": {
@@ -10334,7 +10345,7 @@
           "type": "JobberGetVisits"
         },
         "dragging": false,
-        "id": "JobberGetVisits-NdCh2",
+        "id": "JobberGetVisits-DIRq2",
         "measured": {
           "height": 321,
           "width": 320
@@ -10348,7 +10359,7 @@
       },
       {
         "data": {
-          "id": "note-borKS",
+          "id": "note-UoNii",
           "node": {
             "description": "# \ud83d\udcd6 README\n\n# MGR4SMB Assistant \u2014 Langflow Multi-Agent Orchestrator\n\nA Langflow-based conversational assistant for small service businesses. A single **Orchestrator Agent** identifies the caller, greets them by name, and routes each turn to a specialized sub-agent that handles general information, sales, customer support, or Jobber account lookups.\n",
             "display_name": "",
@@ -10361,7 +10372,7 @@
         },
         "dragging": false,
         "height": 376,
-        "id": "note-borKS",
+        "id": "note-UoNii",
         "measured": {
           "height": 376,
           "width": 699
@@ -10377,7 +10388,7 @@
       },
       {
         "data": {
-          "id": "note-d7NgX",
+          "id": "note-9TDO6",
           "node": {
             "description": "# \ud83d\udcd6  Orchestrator Agent\n\nThe Orchestrator is the entry point for every conversation and the only agent the user talks to directly. Its job is identification and routing \u2014 it never answers domain questions itself.\n\n**Responsibilities**\n- Collect the user's **email** and **phone** before doing anything else. Both are required; routing is blocked until both are in the conversation history.\n- Call the **Greeting Agent** exactly once with the collected email and phone, and surface the returned welcome line to the user.\n- Classify the user's intent and call **exactly one** specialist tool per turn.\n- Pass full context to the specialist: original question, email, phone, timezone, first name (if known), and an explicit note that the user has already been greeted.\n- Return the specialist's response verbatim \u2014 no reformatting, no JSON wrapping, no extra summary.\n\n**Routing priority**\n1. Existing appointment / booked service \u2192 `customer_support_agent`\n2. New booking / scheduling request \u2192 `sales_agent`\n3. General company question \u2192 `general_info_agent`\n4. Ambiguous \u2192 ask one short clarification question\n**Guardrails**\n- Never skips identification (Step 1).\n- Never calls more than one routing tool per turn.\n- Never books or modifies appointments without email, phone, and timezone all present.\n",
             "display_name": "",
@@ -10390,7 +10401,7 @@
         },
         "dragging": false,
         "height": 919,
-        "id": "note-d7NgX",
+        "id": "note-9TDO6",
         "measured": {
           "height": 919,
           "width": 1092
@@ -10406,7 +10417,7 @@
       },
       {
         "data": {
-          "id": "note-wwR6l",
+          "id": "note-d0Gbp",
           "node": {
             "description": "# \ud83d\udcd6  General Info Agent\n\nHandles every non-transactional question about the company. Grounded entirely in the knowledge base \u2014 it will not speculate.\n\n**Answers questions about**\n- Company name, background, and mission\n- Services offered and pricing basics\n- Business hours and location\n- Coverage area\n- Policies and FAQs\n\n**Behavior**\n- Always consults the **MongoDB Atlas Vector** knowledge base before responding.\n- Replies in plain English, concisely.\n- If the knowledge base has no answer, says so honestly and offers to help with something else.\n- If the user asks to schedule or modify an appointment, explains that another team handles that and defers back to the Orchestrator's routing.\n\n**Guardrails**\n- Never invents facts.\n- Never schedules, modifies, or cancels appointments.\n- Never touches customer account or booking data.\n- Skips greetings \u2014 the Orchestrator has already welcomed the user.\n",
             "display_name": "",
@@ -10419,7 +10430,7 @@
         },
         "dragging": false,
         "height": 1031,
-        "id": "note-wwR6l",
+        "id": "note-d0Gbp",
         "measured": {
           "height": 1031,
           "width": 1076
@@ -10435,7 +10446,7 @@
       },
       {
         "data": {
-          "id": "note-Qpxr2",
+          "id": "note-fScys",
           "node": {
             "description": "# \ud83d\udcd6  Greeting Agent\n\nA single-purpose agent whose only job is to produce one welcome line. It exists so that specialist agents can stay focused on their domain and never duplicate greeting logic.\n\n**Behavior**\n- Receives the user's email and phone from the Orchestrator.\n- Calls **GHL Contact Lookup** (lowercased email preferred; phone as fallback).\n- Returns exactly one of:\n  - `\"Welcome back, {FirstName}!\"` \u2014 if the contact is found.\n  - `\"Thanks for contacting us!\"` \u2014 if no contact is found.\n\n**Guardrails**\n- Never asks the user a question.\n- Never mentions classification, vendor status, IDs, or any internal details.\n- Never adds emojis, follow-ups, or extra sentences.\n- Output is always a single line.",
             "display_name": "",
@@ -10448,7 +10459,7 @@
         },
         "dragging": false,
         "height": 799,
-        "id": "note-Qpxr2",
+        "id": "note-fScys",
         "measured": {
           "height": 799,
           "width": 1082
@@ -10464,7 +10475,7 @@
       },
       {
         "data": {
-          "id": "note-inncF",
+          "id": "note-0F3Np",
           "node": {
             "description": "# \ud83d\udcd6  Customer Support Agent\n\nHandles existing appointments: **viewing**, **rescheduling**, and **cancelling**. This is the only agent that reads or modifies customer data, and it enforces strict identity verification before doing so.\n\n**Step 1 \u2014 Verify identity (always first)**\n\n*Step 1a \u2014 Email + phone match (automatic):*\n1. Acknowledge the request and tell the user a verification code will be sent to the email on file.\n2. Call **GHL Send OTP** with the user's email and phone.\n3. If the response starts with `OTP_FAILED`, tell the user their information doesn't match \u2014 without revealing which specific field was wrong \u2014 and stop.\n4. If the response starts with `OTP_SENT`, continue.\n\n*Step 1b \u2014 Emailed code verification:*\n1. Ask the user to provide the 6-digit code from their inbox.\n2. Call **GHL Verify OTP** with the email and the code.\n3. `VERIFIED` \u2192 proceed. `UNVERIFIED` \u2192 allow up to 2 retries, resend on expiry, end politely after 3 total failed attempts.\n\n**Step 2 \u2014 Handle the request**\n\n*Viewing:* Call **GHL Get Appointments**; present service, date/time (in user timezone), and status.\n\n*Rescheduling:* Get Appointments \u2192 confirm which one \u2192 **Cancel Appointment** on the old one \u2192 **Available Slots** \u2192 present options \u2192 **Book Appointment** on the new slot \u2192 confirm with old-vs-new details.\n\n*Cancelling:* Get Appointments \u2192 confirm which one \u2192 read back for explicit user approval \u2192 **Cancel Appointment** \u2192 confirm.\n\n**Guardrails**\n- Never accesses appointment data before verification succeeds.\n- Never reveals which specific field (email or phone) didn't match \u2014 always a generic \"information does not match\" message.\n- Always passes the user's timezone to every tool call.\n- When rescheduling, always cancels the old appointment **before** booking the new one.\n- Routes new-booking requests to the Sales team.\n- Never confirms changes without the user's explicit approval.\n- Skips greetings \u2014 the Orchestrator has already welcomed the user.",
             "display_name": "",
@@ -10477,7 +10488,7 @@
         },
         "dragging": false,
         "height": 1395,
-        "id": "note-inncF",
+        "id": "note-0F3Np",
         "measured": {
           "height": 1395,
           "width": 1055
@@ -10493,7 +10504,7 @@
       },
       {
         "data": {
-          "id": "note-A2l0v",
+          "id": "note-k7fq5",
           "node": {
             "description": "# \ud83d\udcd6  Sales Agent\n\nResponsible for **new** appointment bookings. Retrieves real availability from GHL and finalizes bookings through the GHL API.\n\n**Three-step flow**\n1. **Confirm the service** \u2014 If the service is clear, briefly acknowledge it. If missing or ambiguous, ask.\n2. **Retrieve availability** \u2014 Once service + email/phone + timezone are known, immediately call **GHL Available Slots**. The tool walks forward up to 14 business days to find the next open day, so there's no need to ask the user for a preferred date.\n3. **Book** \u2014 When the user picks a slot, immediately call **GHL Book Appointment** with the exact ISO slot string, service, and user timezone. Share the confirmation (service, time, confirmation ID).\n\n**Guardrails**\n- Emails are lowercased before GHL lookups.\n- Never invents slots \u2014 availability is always read from the API.\n- Never claims a booking succeeded without calling Book Appointment.\n- Always passes the user's timezone as `user_timezone` so displayed times match the caller's expectations.\n- Routes existing-appointment questions to Customer Support.\n- Skips greetings \u2014 the Orchestrator has already welcomed the user.",
             "display_name": "",
@@ -10506,7 +10517,7 @@
         },
         "dragging": false,
         "height": 801,
-        "id": "note-A2l0v",
+        "id": "note-k7fq5",
         "measured": {
           "height": 801,
           "width": 1037
@@ -10522,7 +10533,7 @@
       },
       {
         "data": {
-          "id": "note-xQfEg",
+          "id": "note-4H5A5",
           "node": {
             "description": "# \ud83d\udcd6  Jobber Support Agent\n\nA read-only agent for answering questions about a Jobber account. It cannot book, modify, or cancel anything \u2014 any change must be made in Jobber directly.\n\n**Answers questions about**\n- **Clients** \u2014 contact info, matching records\n- **Properties** \u2014 service addresses per client\n- **Jobs** \u2014 titles, status, dates, totals, the property each job is on\n- **Visits** \u2014 scheduled and completed appointments per client/job\n\n**Two-step flow**\n1. **Resolve the client first** \u2014 Every downstream Jobber tool requires the Jobber client ID (base64). The agent always calls **Jobber Get Clients** first with whatever identifier the user provided (name / email / phone / ID). If there's one match, it uses that ID. Multiple matches \u2192 asks the user to disambiguate. Zero matches \u2192 reports it honestly and asks for a different identifier.\n2. **Answer with the right tool** \u2014 Based on intent, calls **Get Properties**, **Get Jobs**, or **Get Visits** with the resolved client ID. For compound questions (e.g., \"list every visit at each property\"), it chains calls and cross-references results through the job \u2192 property relationship.\n\n**Guardrails**\n- Never guesses a Jobber client ID \u2014 it must come from a Get Clients response.\n- Never picks one among multiple matches \u2014 always asks the user.\n- Reuses the resolved client ID across follow-ups in the same conversation.\n- Read-only: will not claim to book, reschedule, cancel, update, or delete anything in Jobber.\n- Summarizes \u2014 presents clean bullet lists rather than raw field dumps.",
             "display_name": "",
@@ -10535,7 +10546,7 @@
         },
         "dragging": false,
         "height": 1002,
-        "id": "note-xQfEg",
+        "id": "note-4H5A5",
         "measured": {
           "height": 1002,
           "width": 1049
@@ -10551,14 +10562,14 @@
       }
     ],
     "viewport": {
-      "x": 982.4250366062236,
-      "y": -1234.272824416727,
-      "zoom": 0.5625292423444059
+      "x": 40.31666098329492,
+      "y": -212.51411676821215,
+      "zoom": 0.8778217976095287
     }
   },
   "description": "Load your data for chat context with Retrieval Augmented Generation.",
   "endpoint_name": null,
-  "id": "0274f8f2-6c27-4f67-8b0a-e9149ed89677",
+  "id": "4b029993-1e67-404c-9827-0bd0349f32ae",
   "is_component": false,
   "last_tested_version": "1.8.4",
   "locked": false,

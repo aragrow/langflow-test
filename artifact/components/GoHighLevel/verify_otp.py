@@ -102,6 +102,48 @@ class GoHighLevelVerifyOTP(Component):
             "Version": GHL_VERSION,
         }
 
+    def _resolve_field_id(self, client: httpx.Client, user_key: str) -> str:
+        """Resolve a user-provided custom field key to the GHL field id.
+
+        Accepts either:
+        - A fieldKey (e.g. 'contact.otp_code' or 'otp_code')
+        - A raw GHL field id (returned as-is)
+
+        Raw IDs are assumed to contain no dot and to be ~20 chars of
+        base62. Anything else is looked up via the custom-fields
+        definitions endpoint and matched by fieldKey or name.
+
+        Result is memoized on self for the duration of the request.
+        """
+        cache = getattr(self, "_field_id_cache", None)
+        if cache is None:
+            cache = {}
+            self._field_id_cache = cache
+        if user_key in cache:
+            return cache[user_key]
+
+        if "." not in user_key and len(user_key) >= 15 and user_key.isalnum():
+            cache[user_key] = user_key
+            return user_key
+
+        resp = client.get(
+            f"{GHL_BASE}/locations/{self.location_id}/customFields",
+            headers=self._headers(),
+        )
+        resp.raise_for_status()
+        definitions = resp.json().get("customFields", [])
+
+        want = user_key if user_key.startswith("contact.") else f"contact.{user_key}"
+        for d in definitions:
+            if d.get("fieldKey") == want or d.get("fieldKey") == user_key or d.get("name") == user_key:
+                cache[user_key] = d["id"]
+                return d["id"]
+
+        raise RuntimeError(
+            f"Custom field '{user_key}' not found in GHL location {self.location_id}. "
+            f"Create it under Settings > Custom Fields, or use the field id directly."
+        )
+
     def _lookup_contact(self, client: httpx.Client) -> dict | None:
         """Search GHL contacts by email or phone."""
         identifier = self.contact_identifier.strip()
@@ -132,12 +174,12 @@ class GoHighLevelVerifyOTP(Component):
         contacts = resp.json().get("contacts", [])
         return contacts[0] if contacts else None
 
-    def _clear_otp(self, client: httpx.Client, contact_id: str) -> None:
+    def _clear_otp(self, client: httpx.Client, contact_id: str, code_field_id: str, expiry_field_id: str) -> None:
         """Clear the OTP fields on the contact to prevent reuse."""
         update_body = {
             "customFields": [
-                {"key": self.otp_code_field_key, "value": ""},
-                {"key": self.otp_expiry_field_key, "value": ""},
+                {"id": code_field_id, "value": ""},
+                {"id": expiry_field_id, "value": ""},
             ]
         }
         client.put(
@@ -146,11 +188,15 @@ class GoHighLevelVerifyOTP(Component):
             json=update_body,
         )
 
-    def _get_custom_field(self, contact: dict, field_key: str) -> str:
-        """Extract a custom field value from a contact by its key."""
+    def _get_custom_field(self, contact: dict, field_id: str) -> str:
+        """Extract a custom field value from a contact by its id."""
         for field in contact.get("customFields", []):
-            if field.get("key") == field_key or field.get("id") == field_key:
-                return (field.get("value") or "").strip()
+            if field.get("id") == field_id:
+                value = field.get("value") or ""
+                # GHL sometimes wraps scalar values in a list
+                if isinstance(value, list):
+                    value = value[0] if value else ""
+                return str(value).strip()
         return ""
 
     def verify_otp(self) -> Message:
@@ -187,9 +233,15 @@ class GoHighLevelVerifyOTP(Component):
                     or identifier
                 )
 
+                # Resolve human-readable field keys → GHL field ids (contact search
+                # returns customFields with id populated but key=None, so we must
+                # match by id).
+                code_field_id = self._resolve_field_id(client, self.otp_code_field_key)
+                expiry_field_id = self._resolve_field_id(client, self.otp_expiry_field_key)
+
                 # Read stored OTP and expiry from custom fields
-                stored_code = self._get_custom_field(contact, self.otp_code_field_key)
-                stored_expiry = self._get_custom_field(contact, self.otp_expiry_field_key)
+                stored_code = self._get_custom_field(contact, code_field_id)
+                stored_expiry = self._get_custom_field(contact, expiry_field_id)
 
                 if not stored_code:
                     return self._msg(
@@ -202,7 +254,7 @@ class GoHighLevelVerifyOTP(Component):
                     try:
                         expiry_dt = datetime.fromisoformat(stored_expiry.replace("Z", "+00:00"))
                         if datetime.now(timezone.utc) > expiry_dt:
-                            self._clear_otp(client, contact_id)
+                            self._clear_otp(client, contact_id, code_field_id, expiry_field_id)
                             return self._msg(
                                 "UNVERIFIED: The verification code has expired. "
                                 "Please request a new code."
@@ -212,7 +264,7 @@ class GoHighLevelVerifyOTP(Component):
 
                 # Compare codes
                 if user_code == stored_code:
-                    self._clear_otp(client, contact_id)
+                    self._clear_otp(client, contact_id, code_field_id, expiry_field_id)
                     return self._msg(
                         f"VERIFIED: Identity confirmed for {contact_name}. "
                         "You may proceed with appointment queries or changes."

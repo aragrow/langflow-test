@@ -115,6 +115,49 @@ class GoHighLevelSendOTP(Component):
             "Version": GHL_VERSION,
         }
 
+    def _resolve_field_id(self, client: httpx.Client, user_key: str) -> str:
+        """Resolve a user-provided custom field key to the GHL field id.
+
+        Accepts either:
+        - A fieldKey (e.g. 'contact.otp_code' or 'otp_code')
+        - A raw GHL field id (returned as-is)
+
+        Raw IDs are assumed to contain no dot and to be ~20 chars of
+        base62. Anything else is looked up via the custom-fields
+        definitions endpoint and matched by fieldKey or name.
+
+        Result is memoized on self for the duration of the request.
+        """
+        cache = getattr(self, "_field_id_cache", None)
+        if cache is None:
+            cache = {}
+            self._field_id_cache = cache
+        if user_key in cache:
+            return cache[user_key]
+
+        # Heuristic: raw GHL ids have no dot and are ~20 alphanum chars
+        if "." not in user_key and len(user_key) >= 15 and user_key.isalnum():
+            cache[user_key] = user_key
+            return user_key
+
+        resp = client.get(
+            f"{GHL_BASE}/locations/{self.location_id}/customFields",
+            headers=self._headers(),
+        )
+        resp.raise_for_status()
+        definitions = resp.json().get("customFields", [])
+
+        want = user_key if user_key.startswith("contact.") else f"contact.{user_key}"
+        for d in definitions:
+            if d.get("fieldKey") == want or d.get("fieldKey") == user_key or d.get("name") == user_key:
+                cache[user_key] = d["id"]
+                return d["id"]
+
+        raise RuntimeError(
+            f"Custom field '{user_key}' not found in GHL location {self.location_id}. "
+            f"Create it under Settings > Custom Fields, or use the field id directly."
+        )
+
     def _lookup_contact_by_email(self, client: httpx.Client, email: str) -> dict | None:
         """Search GHL contacts by email. Returns first match or None."""
         body = {
@@ -144,8 +187,16 @@ class GoHighLevelSendOTP(Component):
 
     @staticmethod
     def _normalize_phone(phone: str) -> str:
-        """Strip a phone number to digits only for comparison."""
-        return re.sub(r"\D", "", phone)
+        """Strip a phone number to digits only for comparison.
+
+        For 11-digit US numbers, drop a leading '1' so that
+        '+19522281752', '19522281752', '(952) 228-1752', and
+        '9522281752' all normalize to the same value.
+        """
+        digits = re.sub(r"\D", "", phone or "")
+        if len(digits) == 11 and digits.startswith("1"):
+            digits = digits[1:]
+        return digits
 
     def send_otp(self) -> Message:
         """Verify email + phone match the contact, then generate and store OTP.
@@ -201,15 +252,21 @@ class GoHighLevelSendOTP(Component):
                 expires_at = datetime.now(timezone.utc) + timedelta(minutes=OTP_EXPIRY_MINUTES)
                 expires_at_iso = expires_at.isoformat()
 
+                # Resolve human-readable field keys → GHL field ids so we can
+                # write/read them reliably (GHL's contact API returns customFields
+                # with id populated but key=None).
+                code_field_id = self._resolve_field_id(client, self.otp_code_field_key)
+                expiry_field_id = self._resolve_field_id(client, self.otp_expiry_field_key)
+
                 # Store OTP code and expiry on the contact's custom fields
                 update_body = {
                     "customFields": [
                         {
-                            "key": self.otp_code_field_key,
+                            "id": code_field_id,
                             "value": otp_code,
                         },
                         {
-                            "key": self.otp_expiry_field_key,
+                            "id": expiry_field_id,
                             "value": expires_at_iso,
                         },
                     ]
