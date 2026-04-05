@@ -13,7 +13,7 @@
 # Output  : Human-readable client list, or a "no clients found" message.
 #           Also exposes a Toolset output so it can be wired to an agent.
 # Template: Copy this file as the starting point for other Jobber components.
-#           Follow the same auth pattern, query constants, and build_output flow.
+#           Follow the same auth pattern, query constants, and get_clients flow.
 # =============================================================================
 
 from lfx.custom.custom_component.component import Component
@@ -128,7 +128,7 @@ class JobberGetClients(Component):
       1. Copy this file and rename the class.
       2. Replace _QUERY_BY_ID / _QUERY_ALL with your target queries.
       3. Update _execute_by_id / _execute_all to unpack the new response shape.
-      4. Update _filter_* and build_output formatting as needed.
+      4. Update _filter_* and get_clients formatting as needed.
       5. Keep _headers, _refresh_access_token, and _run_with_token_refresh unchanged.
     """
 
@@ -180,7 +180,7 @@ class JobberGetClients(Component):
     # ------------------------------------------------------------------
     outputs = [
         # Primary output — returns a human-readable Message with client list.
-        Output(display_name="Response", name="output", method="build_output"),
+        Output(display_name="Response", name="output", method="get_clients"),
         # Toolset output — connect to an Agent's Tools port to expose this
         # component as a callable tool. Uses the inherited to_toolkit() method.
         Output(display_name="Toolset", name="component_as_tool", method="to_toolkit", types=["Tool"]),
@@ -433,7 +433,7 @@ class JobberGetClients(Component):
     # Entry point (called by Langflow and by to_toolkit when used as a tool)
     # ------------------------------------------------------------------
 
-    def build_output(self) -> Message:
+    def get_clients(self) -> Message:
         """
         Main execution method.
 

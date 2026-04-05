@@ -42,7 +42,8 @@ export LANGFLOW_SKIP_AUTH_AUTO_LOGIN=true  # deprecated in v2.0 but required in 
 export GRPC_DNS_RESOLVER=native
 export DO_NOT_TRACK=true
 export LANGFLOW_LOG_FILE="/Users/david/Library/Caches/langflow/langflow.log"
-export LANGFLOW_LOG_LEVEL="ERROR"
+export LANGFLOW_LOG_LEVEL="DEBUG"
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES  # macOS fork-safety workaround (langflow 1.8.4+ gunicorn workers)
 
 
 LF_VERSION=$(langflow --version 2>/dev/null | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -1)
