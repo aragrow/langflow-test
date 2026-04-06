@@ -30,7 +30,7 @@ from pathlib import Path
 # ---------------------------------------------------------------------------
 JOBBER_GRAPHQL_URL = "https://api.getjobber.com/api/graphql"    # All GraphQL requests go here (POST)
 JOBBER_TOKEN_URL   = "https://api.getjobber.com/api/oauth/token" # Token refresh endpoint
-JOBBER_VERSION     = "2023-11-15"                                # Required X-JOBBER-GRAPHQL-VERSION header
+JOBBER_VERSION     = "2026-03-10"                                # Required X-JOBBER-GRAPHQL-VERSION header
 
 # ---------------------------------------------------------------------------
 # In-process token cache

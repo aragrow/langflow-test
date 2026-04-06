@@ -37,7 +37,7 @@ from pathlib import Path
 # ---------------------------------------------------------------------------
 JOBBER_GRAPHQL_URL = "https://api.getjobber.com/api/graphql"
 JOBBER_TOKEN_URL   = "https://api.getjobber.com/api/oauth/token"
-JOBBER_VERSION     = "2023-11-15"
+JOBBER_VERSION     = "2026-03-10"
 
 # ---------------------------------------------------------------------------
 # In-process token cache
@@ -49,24 +49,26 @@ _TOKEN_CACHE: dict[str, str] = {}
 # ---------------------------------------------------------------------------
 _QUERY_JOBS = """
 query GetJobs($clientId: ID!, $cursor: String) {
-  jobs(filter: { clientId: $clientId }, after: $cursor, first: 50) {
-    nodes {
-      id
-      title
-      jobStatus
-      startAt
-      endAt
-      total
-      property {
+  client(id: $clientId) {
+    jobs(after: $cursor, first: 50) {
+      nodes {
         id
-        address {
-          street
-          city
-          province
+        title
+        jobStatus
+        startAt
+        endAt
+        total
+        property {
+          id
+          address {
+            street
+            city
+            province
+          }
         }
       }
+      pageInfo { hasNextPage endCursor }
     }
-    pageInfo { hasNextPage endCursor }
   }
 }
 """
@@ -245,7 +247,7 @@ class JobberGetJobs(Component):
             result._auth_error = True  # type: ignore[attr-defined]
             return result
         response.raise_for_status()
-        return response.json().get("data", {}).get("jobs", {}).get("nodes", [])
+        return response.json().get("data", {}).get("client", {}).get("jobs", {}).get("nodes", [])
 
     # ------------------------------------------------------------------
     # Formatting helpers

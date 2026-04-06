@@ -238,10 +238,10 @@ class GoHighLevelGetAppointments(Component):
             status = event.get("appointmentStatus", "unknown")
             event_id = event.get("id", "unknown")
             lines.append(
-                f"  {i}. {title}\n"
+                f"  {i}. [EVENT_ID: {event_id}]\n"
+                f"     Service: {title}\n"
                 f"     Time: {start}\n"
-                f"     Status: {status}\n"
-                f"     ID: {event_id}"
+                f"     Status: {status}"
             )
 
         appointments_text = "\n".join(lines)

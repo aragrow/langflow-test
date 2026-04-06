@@ -37,7 +37,7 @@ from pathlib import Path
 # ---------------------------------------------------------------------------
 JOBBER_GRAPHQL_URL = "https://api.getjobber.com/api/graphql"
 JOBBER_TOKEN_URL   = "https://api.getjobber.com/api/oauth/token"
-JOBBER_VERSION     = "2023-11-15"
+JOBBER_VERSION     = "2026-03-10"
 
 # ---------------------------------------------------------------------------
 # In-process token cache
@@ -49,27 +49,30 @@ _TOKEN_CACHE: dict[str, str] = {}
 # ---------------------------------------------------------------------------
 _QUERY_VISITS = """
 query GetVisits($clientId: ID!, $cursor: String) {
-  visits(filter: { clientId: $clientId }, after: $cursor, first: 50) {
-    nodes {
-      id
-      title
-      startAt
-      endAt
-      visitStatus
-      job {
+  client(id: $clientId) {
+    jobs(first: 50) {
+      nodes {
         id
         title
-      }
-      property {
-        id
-        address {
-          street
-          city
-          province
+        visits(after: $cursor, first: 50) {
+          nodes {
+            id
+            title
+            startAt
+            endAt
+            visitStatus
+            property {
+              id
+              address {
+                street
+                city
+                province
+              }
+            }
+          }
         }
       }
     }
-    pageInfo { hasNextPage endCursor }
   }
 }
 """
@@ -249,7 +252,24 @@ class JobberGetVisits(Component):
             result._auth_error = True  # type: ignore[attr-defined]
             return result
         response.raise_for_status()
-        return response.json().get("data", {}).get("visits", {}).get("nodes", [])
+        # In API v2026-03-10, visits are nested under client → jobs → visits.
+        # Flatten all visits across all jobs into a single list, attaching
+        # the parent job's id and title to each visit for context.
+        jobs = (
+            response.json()
+            .get("data", {})
+            .get("client", {})
+            .get("jobs", {})
+            .get("nodes", [])
+        )
+        visits: list[dict] = []
+        for job in jobs:
+            job_id = job.get("id", "")
+            job_title = job.get("title", "")
+            for visit in job.get("visits", {}).get("nodes", []):
+                visit["job"] = {"id": job_id, "title": job_title}
+                visits.append(visit)
+        return visits
 
     # ------------------------------------------------------------------
     # Formatting helpers

@@ -36,7 +36,7 @@ from pathlib import Path
 # ---------------------------------------------------------------------------
 JOBBER_GRAPHQL_URL = "https://api.getjobber.com/api/graphql"
 JOBBER_TOKEN_URL   = "https://api.getjobber.com/api/oauth/token"
-JOBBER_VERSION     = "2023-11-15"
+JOBBER_VERSION     = "2026-03-10"
 
 # ---------------------------------------------------------------------------
 # In-process token cache (shared across Jobber components in the same process)
@@ -53,15 +53,13 @@ query GetProperties($clientId: ID!) {
     firstName
     lastName
     properties {
-      nodes {
-        id
-        address {
-          street
-          city
-          province
-          postalCode
-          country
-        }
+      id
+      address {
+        street
+        city
+        province
+        postalCode
+        country
       }
     }
   }
@@ -246,7 +244,8 @@ class JobberGetProperties(Component):
         client_data = response.json().get("data", {}).get("client")
         if not client_data:
             return []
-        return client_data.get("properties", {}).get("nodes", [])
+        # In API v2026-03-10, properties is a plain list, not { nodes: [...] }
+        return client_data.get("properties", [])
 
     # ------------------------------------------------------------------
     # Entry point
